@@ -1,7 +1,7 @@
 // base
 @import 'Base.scss';
 // colors
-
+@import 'Colors.scss';
 // 
 
 // utilities (margin, padding, etc.)
@@ -9,4 +9,6 @@
 // components
 @import './components/HomePage.scss';
 @import './components/Bio.scss';
+@import './components/ErrorPage.scss';
+@import './components/Navigation.scss';
 @import './components/Contact.scss';

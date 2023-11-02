@@ -1,7 +1,11 @@
-const Bio = () => {
+import './Bio.scss';
+
+function Bio() {
     return (
-        <h3>About Me!</h3>
-    )
+        <div className="bio-container">
+            <h1>About Me!</h1>
+        </div>
+    );
 }
 
 export default Bio;

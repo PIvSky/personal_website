@@ -1,0 +1,128 @@
+@import '../Base.scss';
+@import '../Colors.scss';
+
+/* 
+SMALL SCREEN
+*/
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+    
+}
+header {
+    // background-color: map-get($colors, background);  
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    .nav-title {
+        color: map-get($colors, primary);
+        cursor: pointer;
+        padding: 0.8rem;
+        font-size: 1.2rem;
+        font-family: map-get($fonts, basic-font);
+        font-weight: 400;
+        :hover{
+            color: map-get($colors, hover )
+
+        }
+    }
+    .nav {
+        // display: flex;
+        position: fixed;
+        margin: auto;
+        padding: 0px;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        transition: 1.5s;
+        transform: translateY(-100vh);
+        background-color: map-get($colors, background);
+        color: map-get($colors, primary );
+        
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+
+            .nav-list__item {
+                padding: 10px;
+
+                a {
+                    color: map-get($colors, primary);
+                    font-size: 0.9rem;
+                    font-family: map-get($fonts, basic-font);
+                    text-decoration: none;
+                    cursor: pointer;
+
+                }
+                
+                a:hover {
+                    color: map-get($colors, hover )
+                }
+            }
+            
+        }
+    }
+
+    .responsive_nav {
+        transform: none;
+    }
+
+    .nav-btn {
+        padding: 0.9rem;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: map-get($colors, primary);
+        visibility: visible;
+        opacity: 1;
+        font-size: 1.6rem;
+    }
+
+    .nav-btn__close {
+        position: absolute;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0px;
+        top: 1.3rem;
+        right: 0.8rem;
+    }
+}
+
+/* 
+LARGE SCREEN
+*/
+
+@media screen and (min-width: 1024px){
+
+    header {
+        white-space: nowrap;
+        
+        .nav-title {
+            padding-left: 3rem;
+        }
+
+        .nav {
+            justify-content: flex-end;
+            transform: none;
+            position: relative;
+            right: 2rem;
+            height: auto;
+            display: flex;
+            .nav-list{
+                flex-direction: row;
+                .nav-list__item{
+                    padding-inline: 1.5rem;
+                }
+            }
+        }
+
+        .nav-btn, .nav-btn__close {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}

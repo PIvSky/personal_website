@@ -1,7 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 * {
   margin: 0px;
+  font-size: 18px;
 }
 
-.homepage {
+* {
   margin: 0px;
+  font-size: 18px;
+}
+
+/* 
+SMALL SCREEN
+*/
+header {
+  background-color: rgb(245, 243, 243);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+  transform: translateY(-100vh);
+  background-color: rgb(245, 243, 243);
+  color: rgb(34, 34, 34);
+}
+header nav .nav-list {
+  list-style: none;
+  padding: 0px;
+}
+header nav .nav-list li {
+  padding: 10px;
+}
+header nav .nav-list li a {
+  color: rgb(34, 34, 34);
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+}
+header nav .nav-list li a:hover {
+  color: rgba(59, 49, 49, 0.507);
+}
+header .responsive_nav {
+  transform: none;
+}
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgb(34, 34, 34);
+  visibility: visible;
+  opacity: 1;
+  font-size: 1.6rem;
+}
+header .nav-btn__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+/* 
+LARGE SCREEN
+*/
+@media screen and (min-width: 1024px) {
+  header {
+    height: auto;
+  }
+  header nav {
+    position: relative;
+    height: 10px;
+    margin: 2px;
+    padding: 2rem 2rem;
+    display: flex;
+    transform: none;
+    flex-direction: row;
+  }
+  header .nav-btn, header .nav-btn__close {
+    visibility: hidden;
+    opacity: 0;
+  }
 }/*# sourceMappingURL=index.css.map */

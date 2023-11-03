@@ -22,10 +22,11 @@ header .nav-title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
-header .nav-title :hover {
+header .nav-title:hover {
   color: rgba(59, 49, 49, 0.507);
 }
 header .nav {
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;

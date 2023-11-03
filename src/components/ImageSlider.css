@@ -1,1 +1,60 @@
-/*# sourceMappingURL=ImageSlider.css.map */
+.slides-container {
+  height: 100%;
+  position: relative;
+}
+.slides-container .left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translate(0, -50%);
+  font-size: 95px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  transition: 1s;
+}
+.slides-container .left-arrow:hover {
+  transform: translate(0, -45%) scale(1.3);
+  color: #f84417;
+}
+.slides-container .right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  transform: translate(0, -50%);
+  font-size: 95px;
+  color: #fff;
+  z-index: 1;
+  transition: 1s;
+  cursor: pointer;
+}
+.slides-container .right-arrow:hover {
+  transform: translate(0, -45%) scale(1.3);
+  color: #f84417;
+}
+.slides-container .slides-container__item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-position: center;
+  background-size: cover;
+  transition: 0.4s ease-out;
+}
+.slides-container .slides-container__item .dots-container {
+  position: absolute;
+  bottom: 0px;
+  left: 50%; /* This gets beginning of dots container on middle of parrent */
+  transform: translateX(-50%); /* Takes this container 50% on left of its width */
+  display: flex;
+  flex-direction: row;
+}
+.slides-container .slides-container__item .dots-container .dots-container__items {
+  margin: 0px 4px;
+  font-size: 6rem;
+  color: #fff;
+  cursor: pointer;
+}
+.slides-container .slides-container__item .dots-container .dots-container__items:hover {
+  color: #F88017;
+}/*# sourceMappingURL=ImageSlider.css.map */

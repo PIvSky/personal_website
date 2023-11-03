@@ -1,15 +1,41 @@
 @import '../Colors.scss';
 @import '../Base.scss';
 
-.container {
+/* 
+SMALL SCREEN
+*/
+
+.home-container {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    align-items: flex-start;
+    padding: 10px;
     height: 100vh;
     background-color: map-get($colors, background );
 
     h1 {
         font-family: map-get($fonts, basic-font );
-        font-size: 7rem;
+        font-size: 2rem;
+    }
+}
+
+.slides-wrapper {
+    width: 800px;
+    height:600px;
+    margin: 10px auto;
+    // border-radius: 50px;
+    // background-color: map-get($colors, background );
+}
+
+/* 
+LARGE SCREEN
+*/
+
+@media screen and (min-width: 1023px) {
+    .slides-wrapper {
+        width: 800px;
+        height:800px;
+        margin: 40px auto;
+
     }
 }

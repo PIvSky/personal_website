@@ -16,16 +16,83 @@
   cursor: crosshair;
 }
 
-.container {
+.home-container {
   display: flex;
   justify-content: center;
-  padding: 50px;
+  align-items: flex-start;
+  padding: 10px;
   height: 100vh;
   background-color: rgb(245, 243, 243);
 }
-.container h1 {
+.home-container h1 {
   font-family: "Oswald", sans-serif;
-  font-size: 7rem;
+  font-size: 2rem;
+}
+
+.slides-wrapper {
+  width: 800px;
+  height: 800px;
+  margin: 40px auto;
+}
+
+.slides-container {
+  height: 100%;
+  position: relative;
+}
+.slides-container .left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translate(0, -50%);
+  font-size: 95px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  transition: 1s;
+}
+.slides-container .left-arrow:hover {
+  transform: translate(0, -45%) scale(1.3);
+  color: #f84417;
+}
+.slides-container .right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  transform: translate(0, -50%);
+  font-size: 95px;
+  color: #fff;
+  z-index: 1;
+  transition: 1s;
+  cursor: pointer;
+}
+.slides-container .right-arrow:hover {
+  transform: translate(0, -45%) scale(1.3);
+  color: #f84417;
+}
+.slides-container .slides-container__item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-position: center;
+  background-size: cover;
+  transition: 0.4s ease-out;
+}
+.slides-container .slides-container__item .dots-container {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.slides-container .slides-container__item .dots-container .dots-container__items {
+  margin: 0px 4px;
+  font-size: 6rem;
+  color: #fff;
+  cursor: pointer;
+}
+.slides-container .slides-container__item .dots-container .dots-container__items:hover {
+  color: #F88017;
 }
 
 * {
@@ -59,7 +126,7 @@ main {
   flex-direction: column;
   height: 100vh;
   padding: 50px;
-  color: #F88017;
+  color: #f84417;
   background-color: rgb(245, 243, 243);
 }
 main h1 {
@@ -94,7 +161,7 @@ header .nav-title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
-header .nav-title :hover {
+header .nav-title:hover {
   color: rgba(59, 49, 49, 0.507);
 }
 header .nav {

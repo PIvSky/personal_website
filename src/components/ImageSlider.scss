@@ -1,0 +1,71 @@
+@import '../Colors.scss';
+
+.slides-container {
+    height: 100%;
+    position: relative;
+
+    .left-arrow {
+        position: absolute;
+        top: 50%;
+        left: 32px;
+        transform: translate(0, -50%);
+        font-size: 95px;
+        color: map-get($colors, whiten );
+        z-index: 1;
+        cursor: pointer;
+        transition: 1s;
+        &:hover {
+            transform: translate(0, -45%) scale(1.3);
+            // scale: 1.3;
+            color: map-get($colors, error );
+        }
+    }
+    .right-arrow {
+        position: absolute;
+        top: 50%;
+        right: 32px;
+        transform: translate(0, -50%);
+        font-size: 95px;
+        color: map-get($colors, whiten);
+        z-index: 1;
+        transition: 1s;
+        cursor: pointer;
+        &:hover {
+            // scale: 1.3;
+            transform: translate(0, -45%) scale(1.3);
+            color: map-get($colors, error );
+        }
+    }
+
+    .slides-container__item {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background-position: center;
+        background-size: cover;
+        // upgrade this transition in future!
+        transition: 0.4s ease-out;
+        
+        .dots-container{
+            // centered position
+            position: absolute;
+            bottom: 0px;
+            left: 50%; /* This gets beginning of dots container on middle of parrent */
+            transform: translateX(-50%); /* Takes this container 50% on left of its width */
+            // text-align: center;
+            display: flex;
+            flex-direction: row;
+            
+            .dots-container__items{
+                margin: 0px 4px;
+                font-size: 6rem;
+                color: map-get($colors, whiten);
+                cursor: pointer;
+                &:hover {
+                    color: map-get($colors, secondary);
+                }
+            }
+        }
+    }
+}

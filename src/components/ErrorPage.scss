@@ -1,0 +1,21 @@
+@import '../Colors.scss';
+@import '../Base.scss';
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 50px;
+    color: map-get($colors, error);
+    background-color: map-get($colors, background );
+    h1 {
+        font-family: map-get($fonts, basic-font );
+        font-size: 2rem;
+    }
+    p {
+        font-family: map-get($fonts, basic-font );
+        font-size: 2rem;
+    }
+}

@@ -8,7 +8,7 @@ SMALL SCREEN
     
 }
 header {
-    // background-color: map-get($colors, background);  
+    background-color: map-get($colors, background);  
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -27,7 +27,9 @@ header {
     }
     
     .nav {
-        // display: flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: fixed;
         margin: auto;
         padding: 0px;
@@ -44,6 +46,7 @@ header {
             display: flex;
             flex-direction: column;
             list-style: none;
+            padding: 0px;
 
             .nav-list__item {
                 padding: 10px;
@@ -105,6 +108,11 @@ LARGE SCREEN
 
     header {
         white-space: nowrap;
+        border-top: 0px;
+        border-inline: 0px;
+        border-bottom-width: 2px;
+        border-style: solid;
+        border-color: map-get($colors, hover);
         
         .nav-title {
             padding-left: 3rem;
@@ -117,6 +125,7 @@ LARGE SCREEN
             right: 2rem;
             height: auto;
             display: flex;
+
             .nav-list{
                 flex-direction: row;
                 .nav-list__item{

@@ -1,1 +1,18 @@
-/*# sourceMappingURL=HomePage.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  height: 100vh;
+  background-color: rgb(245, 243, 243);
+}
+.container h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 7rem;
+}/*# sourceMappingURL=HomePage.css.map */

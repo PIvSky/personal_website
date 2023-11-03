@@ -27,6 +27,7 @@ const Navigation = () => {
                         <NavLink 
                             to="/" 
                             className={({ isActive }) => isActive ? 'active' : ''}
+                            onClick={showNavbar}
                             end
                         >HOME
                         </NavLink>
@@ -35,6 +36,7 @@ const Navigation = () => {
                         <NavLink 
                             to="/bio"
                             className={({ isActive }) => isActive ? 'active' : ''}
+                            onClick={showNavbar}
                         >BIO
                         </NavLink>
                     </li>
@@ -42,6 +44,7 @@ const Navigation = () => {
                         <NavLink 
                             to="/contact"
                             className={({ isActive }) => isActive ? 'active' : ''}
+                            onClick={showNavbar}
                         >CONTACT
                         </NavLink>
                     </li>

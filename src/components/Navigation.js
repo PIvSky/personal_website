@@ -26,7 +26,7 @@ const Navigation = () => {
                     <li className='nav-list__item'>
                         <NavLink 
                             to="/" 
-                            className={({ isActive }) => isActive ? 'active' : Boolean}
+                            className={({ isActive }) => isActive ? 'active' : ''}
                             end
                         >HOME
                         </NavLink>
@@ -34,14 +34,14 @@ const Navigation = () => {
                     <li className='nav-list__item'>
                         <NavLink 
                             to="/bio"
-                            className={({ isActive }) => isActive ? 'active' : Boolean}
+                            className={({ isActive }) => isActive ? 'active' : ''}
                         >BIO
                         </NavLink>
                     </li>
                     <li className='nav-list__item'>
                         <NavLink 
                             to="/contact"
-                            className={({ isActive }) => isActive ? 'active' : Boolean}
+                            className={({ isActive }) => isActive ? 'active' : ''}
                         >CONTACT
                         </NavLink>
                     </li>

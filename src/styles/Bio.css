@@ -3,6 +3,19 @@
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* 
+      Fade-in animation for navigation
+   */
+  opacity: 0;
+  animation: fade-in 300ms ease-in forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* 

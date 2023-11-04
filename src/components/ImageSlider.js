@@ -29,13 +29,13 @@ const ImageSlider = ({slides}) => {
 
     // SLIDE SHOW
     // TODO - some problem - after I click arrow couple of time, this slide show is going crazy --> is fasterl
-    setTimeout(() => {
-        if (currentIndex < slides.length - 1) {
-            setCurrentIndex(currentIndex + 1)
-            } else {
-                setCurrentIndex(0)
-            }
-    }, 5700)
+    // setTimeout(() => {
+    //     if (currentIndex < slides.length - 1) {
+    //         setCurrentIndex(currentIndex + 1)
+    //         } else {
+    //             setCurrentIndex(0)
+    //         }
+    // }, 5700)
 
     return (
         <div className='slides-container'>

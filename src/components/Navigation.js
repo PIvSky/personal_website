@@ -12,8 +12,13 @@ const Navigation = () => {
     const navigateHandler = () => {
         navigate('./')
     }
+
     const showNavbar = () => {
         navRef.current.classList.toggle('responsive_nav')
+        // Scrolling to top of the page
+        window.scrollTo({
+            top: 0,
+          });
     }
 
     return (

@@ -16,7 +16,7 @@ header {
     .nav-title {
         color: map-get($colors, primary);
         cursor: pointer;
-        padding: 0.8rem;
+        padding: 15px;
         font-size: 1.2rem;
         font-family: map-get($fonts, basic-font);
         font-weight: 400;

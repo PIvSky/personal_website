@@ -123,7 +123,6 @@ SMALL SCREEN
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  height: 100vh;
   width: 100%;
   padding: 0px;
 }
@@ -133,14 +132,16 @@ SMALL SCREEN
   align-items: flex-start;
   flex-direction: column;
   margin: 0px auto;
-  padding: 10px 10px 10px;
-  height: 500px;
-  width: 100%;
+  padding: 10px 15px 20px;
+  height: auto;
   font-family: "Oswald", sans-serif;
   color: rgb(34, 34, 34);
 }
 .bio-wrapper .bio-container .bio-title {
   font-size: 1.5rem;
+  border: solid #F88017;
+  border-top: none;
+  border-inline: none;
 }
 .bio-wrapper .bio-container .bio-content {
   padding-top: 20px;
@@ -149,13 +150,18 @@ SMALL SCREEN
   overflow: auto;
   word-wrap: break-word;
 }
-.bio-wrapper .bio-image {
-  height: 100%;
+.bio-wrapper .bio-image__wrapper {
+  height: auto;
   width: 100%;
-  font-family: "Oswald", sans-serif;
-  background-image: url(../assets/img/photo-3.jpg);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.bio-wrapper .bio-image__wrapper .bio-image__content {
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* 
@@ -164,7 +170,11 @@ LARGE SCREEN
 @media screen and (min-width: 1024px) {
   .bio-container {
     height: 150px;
-    width: 800px;
+    width: 60%;
+  }
+  .bio-image__wrapper {
+    max-width: 60%;
+    margin: auto;
   }
 }
 * {
@@ -210,7 +220,7 @@ header {
 header .nav-title {
   color: rgb(34, 34, 34);
   cursor: pointer;
-  padding: 0.8rem;
+  padding: 15px;
   font-size: 1.2rem;
   font-family: "Oswald", sans-serif;
   font-weight: 400;

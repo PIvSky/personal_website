@@ -28,6 +28,7 @@ const ImageSlider = ({slides}) => {
     }
 
     // SLIDE SHOW
+    // TODO - some problem - after I click arrow couple of time, this slide show is going crazy --> is fasterl
     setTimeout(() => {
         if (currentIndex < slides.length - 1) {
             setCurrentIndex(currentIndex + 1)

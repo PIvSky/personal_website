@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+}
+
+/* 
+SMALL SCREEN
+*/
+.bio-wrapper {
+  background-color: rgb(245, 243, 243);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+}
+.bio-wrapper .bio-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0px auto;
+  padding: 10px 10px 10px;
+  height: 500px;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  color: rgb(34, 34, 34);
+}
+.bio-wrapper .bio-container .bio-title {
+  font-size: 1.5rem;
+}
+.bio-wrapper .bio-container .bio-content {
+  padding-top: 20px;
+  padding-right: 10px;
+  font-size: 0.8rem;
+  overflow: auto;
+  word-wrap: break-word;
+}
+.bio-wrapper .bio-image {
+  height: 100%;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  background-image: url(../assets/img/photo-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 
+LARGE SCREEN
+*/
+@media screen and (min-width: 1024px) {
+  .bio-container {
+    height: 150px;
+    width: 800px;
+  }
+}/*# sourceMappingURL=Bio.css.map */

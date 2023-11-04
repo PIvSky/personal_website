@@ -1,5 +1,5 @@
 import Navigation from "./Navigation";
-import './ErrorPage.scss';
+import '../styles/ErrorPage.scss';
 
 const ErrorPage = () => {
     return (

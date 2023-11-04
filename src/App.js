@@ -6,7 +6,7 @@ import Bio from './components/Bio';
 import Contact from './components/Contact';
 import ErrorPage from './components/ErrorPage';
 // stylesheet
-import './App.scss';
+import './styles/App.scss';
 
 const websiteRoutes = createBrowserRouter([
   { 

@@ -16,6 +16,9 @@
   cursor: crosshair;
 }
 
+/* 
+SMALL SCREEN
+*/
 .home-container {
   display: flex;
   justify-content: center;
@@ -31,10 +34,20 @@
 
 .slides-wrapper {
   width: 800px;
-  height: 800px;
-  margin: 40px auto;
+  height: 600px;
+  margin: 10px auto;
 }
 
+/* 
+LARGE SCREEN
+*/
+@media screen and (min-width: 1023px) {
+  .slides-wrapper {
+    width: 800px;
+    height: 800px;
+    margin: 40px auto;
+  }
+}
 .slides-container {
   height: 100%;
   position: relative;
@@ -81,9 +94,10 @@
 .slides-container .slides-container__item .dots-container {
   position: absolute;
   bottom: 0px;
+  left: 50%; /* This gets beginning of dots container on middle of parrent */
+  transform: translateX(-50%); /* Takes this container 50% on left of its width */
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 .slides-container .slides-container__item .dots-container .dots-container__items {
   margin: 0px 4px;
@@ -101,18 +115,58 @@
   cursor: crosshair;
 }
 
-.bio-container {
+/* 
+SMALL SCREEN
+*/
+.bio-wrapper {
+  background-color: rgb(245, 243, 243);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+}
+.bio-wrapper .bio-container {
   display: flex;
   justify-content: center;
-  padding: 50px;
-  height: 100vh;
-  background-color: rgb(245, 243, 243);
-}
-.bio-container h1 {
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0px auto;
+  padding: 10px 10px 10px;
+  height: 500px;
+  width: 100%;
   font-family: "Oswald", sans-serif;
-  font-size: 7rem;
+  color: rgb(34, 34, 34);
+}
+.bio-wrapper .bio-container .bio-title {
+  font-size: 1.5rem;
+}
+.bio-wrapper .bio-container .bio-content {
+  padding-top: 20px;
+  padding-right: 10px;
+  font-size: 0.8rem;
+  overflow: auto;
+  word-wrap: break-word;
+}
+.bio-wrapper .bio-image {
+  height: 100%;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  background-image: url(../assets/img/photo-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/* 
+LARGE SCREEN
+*/
+@media screen and (min-width: 1024px) {
+  .bio-container {
+    height: 150px;
+    width: 800px;
+  }
+}
 * {
   margin: 0px;
   font-size: 18px;
@@ -165,6 +219,7 @@ header .nav-title:hover {
   color: rgba(59, 49, 49, 0.507);
 }
 header .nav {
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;

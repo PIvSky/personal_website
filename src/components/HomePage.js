@@ -1,5 +1,5 @@
 import ImageSlider from './ImageSlider';
-import './HomePage.scss';
+import '../styles/HomePage.scss';
 import photo1 from '../assets/img/photo-1.jpg';
 import photo2 from '../assets/img/photo-2.jpg';
 import photo3 from '../assets/img/photo-3.jpg';
@@ -18,7 +18,6 @@ const HomePage = () => {
         {url: photo5, title: 'photo-5'},
         {url: photo6, title: 'photo-6'},
         {url: photo7, title: 'photo-7'},
-
     ]
 
     return (

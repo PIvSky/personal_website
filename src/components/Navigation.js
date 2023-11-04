@@ -2,7 +2,7 @@ import {useRef} from 'react'
 import { NavLink, useNavigate} from 'react-router-dom';
 import {FaBars, FaTimes} from 'react-icons/fa'
 // import styles from './Navigation.module.scss';
-import './Navigation.scss'
+import '../styles/Navigation.scss'
 
 const Navigation = () => {
 

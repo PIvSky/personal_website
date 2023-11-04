@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import './ImageSlider.scss';
+import '../styles/ImageSlider.scss';
 
 const ImageSlider = ({slides}) => {
 

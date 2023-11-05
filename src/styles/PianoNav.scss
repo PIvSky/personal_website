@@ -18,21 +18,50 @@
         width: 70%;
         
         .pianonav-nav__item{
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
             color: map-get($colors, primary );
             padding-inline: 5px;
             font-size: 0.8rem;
             text-wrap: nowrap;
-            
+            padding-block: 15px;
+            cursor: pointer;
+            // z-index: 2;
+
+            @include hover;
         }
+
         .active {
             color: map-get($colors, secondary );
         }
+
+        img {
+            height: auto;
+            width: 250px;
+            border: solid 2px orange;
+            border-radius: 10%;
+            transition: 1s;
+            z-index: 2;
+        }
+
+        // .active {
+        //     &:active {
+        //         color: map-get($colors, secondary );
+        //     }
+        // }
     }
+    
 }
 
 @media screen and (min-width: 1024px) {
     .pianonav-nav{
         width: 50vw;
+        img {
+            &:hover {
+                scale: 1.1;
+                z-index: 30;
+            }  
+        }
     }
 }

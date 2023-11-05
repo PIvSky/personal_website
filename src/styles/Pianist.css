@@ -24,4 +24,10 @@
 
 .pianist-wrapper {
   background-color: rgb(245, 243, 243);
+}
+
+@media screen and (min-width: 1024px) {
+  .pianist-wrapper {
+    height: 100vh;
+  }
 }/*# sourceMappingURL=Pianist.css.map */

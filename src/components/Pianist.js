@@ -4,6 +4,7 @@ import Nav from './PianoNav';
 import Timelapse from './Timelapse';
 import GrzeczniChlopcy from './GrzeczniChlopcy';
 import Gwozdz from './Gwozdz';
+import GantSava from './GansSava';
 import '../styles/Pianist.scss';
 
 const Pianist = () => {
@@ -16,6 +17,7 @@ const Pianist = () => {
                     <Route path='timelapse' element={<Timelapse/>}></Route>
                     <Route path='grzecznichlopcy' element={<GrzeczniChlopcy/>}></Route>
                     <Route path='gwo' element={<Gwozdz/>}></Route>
+                    <Route path='gant&sava' element={<GantSava/>}></Route>
                 </Routes>
             </div>
         </>

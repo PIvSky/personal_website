@@ -1,0 +1,39 @@
+@import './Colors.scss';
+@import './Base.scss';
+@import '../styles/Utilities.scss';
+
+.timelapse-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70vh;
+    width: 80%;
+    margin-inline: auto;
+    font-family: map-get($fonts, basic-font );
+
+
+    .timelapse-title{
+        @include title-section
+    }
+
+    .timelapse-content {
+        padding-top: 15px;
+    }
+
+    .video-container{
+        display: flex;
+        justify-content: space-evenly; /* what a fantastic feature!*/
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        margin-inline: auto;
+
+        iframe{
+            padding: 5px;
+            // margin: auto;
+        }
+    }
+
+}

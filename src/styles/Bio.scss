@@ -27,8 +27,7 @@ SMALL SCREEN
         color: map-get($colors, primary );
         
         .bio-title {
-            font-size: 1.5rem;
-            @include title-border
+            @include title-section
         }
     
         .bio-content{

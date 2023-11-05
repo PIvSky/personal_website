@@ -4,3 +4,9 @@
 .pianist-wrapper {
     background-color: map-get($colors, background );
 }
+
+@media screen and (min-width: 1024px) {
+    .pianist-wrapper{
+        height: 100vh;
+    }
+}

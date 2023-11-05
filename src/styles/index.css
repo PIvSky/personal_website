@@ -4,16 +4,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 * {
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 * {
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 /* 
@@ -114,6 +150,23 @@ LARGE SCREEN
   font-size: 18px;
   cursor: crosshair;
 }
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
 
 /* 
 SMALL SCREEN
@@ -182,6 +235,103 @@ LARGE SCREEN
   font-size: 18px;
   cursor: crosshair;
 }
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.pianist-wrapper {
+  background-color: rgb(245, 243, 243);
+}
+
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.pianonav-container {
+  display: flex;
+  justify-content: center;
+}
+.pianonav-container .pianonav-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Oswald", sans-serif;
+  list-style: none;
+  padding-inline: 10px;
+  width: 60%;
+}
+.pianonav-container .pianonav-nav .pianonav-nav__item {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+  padding-inline: 2px;
+  font-size: 0.8rem;
+  text-wrap: nowrap;
+}
+.pianonav-container .pianonav-nav .active {
+  color: #F88017;
+}
+
+@media screen and (min-width: 1024px) {
+  .pianonav-nav {
+    width: 50vw;
+  }
+}
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
 
 main {
   display: flex;
@@ -206,6 +356,23 @@ main p {
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 /* 
@@ -330,6 +497,23 @@ LARGE SCREEN
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .contact-container {

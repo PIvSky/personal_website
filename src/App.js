@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from './components/RootLayout';
 import HomePage from './components/HomePage';
 import Bio from './components/Bio';
+import Pianist from './components/Pianist';
+import Arranger from './components/Arranger';
 import Contact from './components/Contact';
 import ErrorPage from './components/ErrorPage';
 // stylesheet
@@ -17,6 +19,8 @@ const websiteRoutes = createBrowserRouter([
       { path: '/', element: <HomePage/>},
       { path:'/contact', element: <Contact/>},
       { path: '/bio', element: <Bio/>},
+      { path: '/pianist/*', element: <Pianist/>},
+      { path: '/arranger-and-composer', element: <Arranger/>},
     ],
   }
 ])

@@ -1,15 +1,16 @@
 // base
-@import 'Base.scss';
+@import './Base.scss';
 // colors
-@import 'Colors.scss';
-// 
-
+@import './Colors.scss';
 // utilities (margin, padding, etc.)
-
+@import './Utilities.scss';
 // components
 @import './HomePage.scss';
 @import './ImageSlider.scss';
 @import './Bio.scss';
+@import './Pianist.scss';
+@import './PianoNav.scss';
+@import './Arranger.scss';
 @import './ErrorPage.scss';
 @import './Navigation.scss';
 @import './Contact.scss';

@@ -22,14 +22,6 @@
   }
 }
 
-.contact-container {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  height: 100vh;
+.pianist-wrapper {
   background-color: rgb(245, 243, 243);
-}
-.contact-container h1 {
-  font-family: "Oswald", sans-serif;
-  font-size: 7rem;
-}/*# sourceMappingURL=Contact.css.map */
+}/*# sourceMappingURL=Pianist.css.map */

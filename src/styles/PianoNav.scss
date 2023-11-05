@@ -1,0 +1,38 @@
+@import '../styles/Colors.scss';
+@import '../styles/Base.scss';
+@import '../styles/Utilities.scss';
+
+.pianonav-container {
+    display: flex;
+    justify-content: center;
+
+    .pianonav-nav{
+        display: flex;
+        justify-content: space-evenly; /* what a fantastic feature!*/
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-family: map-get($fonts, basic-font );
+        list-style: none;
+        padding: 10px 10px;
+        width: 70%;
+        
+        .pianonav-nav__item{
+            text-decoration: none;
+            color: map-get($colors, primary );
+            padding-inline: 5px;
+            font-size: 0.8rem;
+            text-wrap: nowrap;
+            
+        }
+        .active {
+            color: map-get($colors, secondary );
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .pianonav-nav{
+        width: 50vw;
+    }
+}

@@ -47,6 +47,22 @@ const Navigation = () => {
                     </li>
                     <li className='nav-list__item'>
                         <NavLink 
+                            to="/pianist"
+                            className={({ isActive }) => isActive ? 'active' : ''}
+                            onClick={showNavbar}
+                        >PIANIST
+                        </NavLink>
+                    </li>
+                    <li className='nav-list__item'>
+                        <NavLink 
+                            to="/arranger-and-composer"
+                            className={({ isActive }) => isActive ? 'active' : ''}
+                            onClick={showNavbar}
+                        >ARRANGER/COMPOSER
+                        </NavLink>
+                    </li>
+                    <li className='nav-list__item'>
+                        <NavLink 
                             to="/contact"
                             className={({ isActive }) => isActive ? 'active' : ''}
                             onClick={showNavbar}

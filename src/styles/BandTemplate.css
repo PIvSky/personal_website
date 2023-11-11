@@ -3,6 +3,8 @@
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -22,26 +24,25 @@
   }
 }
 
-.timelapse-container {
+.band-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 70vh;
   width: 80%;
   margin-inline: auto;
   font-family: "Oswald", sans-serif;
 }
-.timelapse-container .timelapse-title {
+.band-container .band-title {
   font-size: 1.5rem;
   border: solid #F88017;
   border-top: none;
   border-inline: none;
 }
-.timelapse-container .timelapse-content {
+.band-container .band-content {
   padding-top: 15px;
 }
-.timelapse-container .video-container {
+.band-container .band-video-container {
   display: flex;
   justify-content: space-evenly; /* what a fantastic feature!*/
   align-items: flex-start;
@@ -50,6 +51,14 @@
   padding-top: 15px;
   margin-inline: auto;
 }
-.timelapse-container .video-container iframe {
+.band-container .band-video-container iframe {
+  border: none;
+  border-radius: 10%;
   padding: 5px;
-}/*# sourceMappingURL=Timelapse.css.map */
+}
+
+@media screen and (min-width: 1024px) {
+  .band-container .band-video-container {
+    padding-top: 30px;
+  }
+}/*# sourceMappingURL=BandTemplate.css.map */

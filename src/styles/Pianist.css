@@ -3,6 +3,8 @@
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -24,10 +26,6 @@
 
 .pianist-wrapper {
   background-color: rgb(245, 243, 243);
-}
-
-@media screen and (min-width: 1024px) {
-  .pianist-wrapper {
-    height: 100vh;
-  }
+  height: 100%;
+  min-height: 100vh;
 }/*# sourceMappingURL=Pianist.css.map */

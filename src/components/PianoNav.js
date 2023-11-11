@@ -16,7 +16,7 @@ const Nav = () => {
                             to='timelapse'
                             className={({ isActive }) => isActive ? 'active pianonav-nav__item' : 'pianonav-nav__item'}
                         >
-                        TIMELAPSE
+                        GCH+
                         </NavLink>
                         <img alt="timelapse" src={timelapse}></img>
                     </li>

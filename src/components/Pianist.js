@@ -4,7 +4,7 @@ import Nav from './PianoNav';
 import Timelapse from './Timelapse';
 import GrzeczniChlopcy from './GrzeczniChlopcy';
 import Gwozdz from './Gwozdz';
-import GantSava from './GansSava';
+import GantSava from './GantSava';
 import '../styles/Pianist.scss';
 
 const Pianist = () => {

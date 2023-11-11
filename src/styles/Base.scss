@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+@import '../styles/Colors.scss';
+
 
 * {
     margin: 0px;
     font-size: 18px;
     cursor: crosshair;
+    /* it's probably wrong, but it fixed problem with wrapped 
+    or not band-container in pianist component */
+    // background-color: map-get($colors, background );
 
     @media screen and (min-width: 1024px) {
         /* 

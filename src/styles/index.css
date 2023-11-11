@@ -6,10 +6,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 * {
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -33,6 +36,8 @@
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -149,6 +154,8 @@ LARGE SCREEN
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -234,6 +241,8 @@ LARGE SCREEN
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -255,12 +264,16 @@ LARGE SCREEN
 
 .pianist-wrapper {
   background-color: rgb(245, 243, 243);
+  height: 100%;
+  min-height: 100vh;
 }
 
 * {
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -326,7 +339,7 @@ LARGE SCREEN
     width: 50vw;
   }
   .pianonav-nav img:hover {
-    scale: 1.2;
+    scale: 1.1;
     z-index: 30;
   }
 }
@@ -334,6 +347,71 @@ LARGE SCREEN
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.band-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  margin-inline: auto;
+  font-family: "Oswald", sans-serif;
+}
+.band-container .band-title {
+  font-size: 1.5rem;
+  border: solid #F88017;
+  border-top: none;
+  border-inline: none;
+}
+.band-container .band-content {
+  padding-top: 15px;
+}
+.band-container .band-video-container {
+  display: flex;
+  justify-content: space-evenly; /* what a fantastic feature!*/
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  margin-inline: auto;
+}
+.band-container .band-video-container iframe {
+  border: none;
+  border-radius: 10%;
+  padding: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .band-container .band-video-container {
+    padding-top: 30px;
+  }
+}
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -376,6 +454,8 @@ main p {
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {
@@ -517,6 +597,8 @@ LARGE SCREEN
   margin: 0px;
   font-size: 18px;
   cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
 }
 @media screen and (min-width: 1024px) {
   * {

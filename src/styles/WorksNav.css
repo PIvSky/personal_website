@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.worksnav-container {
+  display: flex;
+  justify-content: center;
+}
+.worksnav-container .worksnav-nav {
+  display: flex;
+  justify-content: space-evenly; /* what a fantastic feature!*/
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Oswald", sans-serif;
+  list-style: none;
+  padding: 10px 10px;
+  width: 70%;
+}
+.worksnav-container .worksnav-nav .worksnav-nav__item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+  padding-inline: 5px;
+  font-size: 0.8rem;
+  text-wrap: nowrap;
+  padding-block: 15px;
+  cursor: pointer;
+}
+.worksnav-container .worksnav-nav .worksnav-nav__item:hover {
+  color: rgba(59, 49, 49, 0.507);
+}
+.worksnav-container .worksnav-nav .active {
+  color: #F88017;
+}
+
+/*
+    LARGE SCREEN
+*/
+@media screen and (min-width: 1024px) {
+  .pianonav-nav {
+    width: 50vw;
+  }
+}/*# sourceMappingURL=WorksNav.css.map */

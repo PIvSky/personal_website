@@ -12,7 +12,7 @@ const Pianist = () => {
     return (
         <>
             <div className='pianist-wrapper'>
-                <Nav></Nav>
+                <Nav/>
                 <Routes>
                     <Route path='timelapse' element={<Timelapse/>}></Route>
                     <Route path='grzecznichlopcy' element={<GrzeczniChlopcy/>}></Route>

@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.works-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  margin-inline: auto;
+  font-family: "Oswald", sans-serif;
+}
+.works-container .works-title {
+  font-size: 1.5rem;
+  border: solid #F88017;
+  border-top: none;
+  border-inline: none;
+  padding-top: 15px;
+}
+.works-container .works-content {
+  padding-top: 15px;
+}
+.works-container .works-video-container {
+  display: flex;
+  justify-content: space-evenly; /* what a fantastic feature!*/
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  margin-inline: auto;
+}
+.works-container .works-video-container iframe {
+  border: none;
+  border-radius: 8%;
+  padding: 5px;
+  height: 300px;
+  width: 80vw;
+  margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .works-container .works-video-container {
+    padding-top: 30px;
+  }
+  .works-container .works-video-container iframe {
+    border-radius: 3%;
+    height: 600px;
+    width: 82vw;
+  }
+}/*# sourceMappingURL=WorksTemplate.css.map */

@@ -1,0 +1,56 @@
+@import './Colors.scss';
+@import './Base.scss';
+@import './Utilities.scss';
+
+.works-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin-inline: auto;
+    font-family: map-get($fonts, basic-font );
+
+    .works-title{
+        @include title-section;
+        padding-top: 15px;
+    }
+
+    .works-content {
+        padding-top: 15px;
+    }
+
+    .works-video-container{
+        display: flex;
+        justify-content: space-evenly; /* what a fantastic feature!*/
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        margin-inline: auto;
+
+        iframe{
+            border: none;
+            border-radius: 8%;
+            padding: 5px;
+            height: 300px;
+            width: 80vw;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .works-container {
+        .works-video-container {
+            padding-top: 30px;
+
+            iframe {
+                border-radius: 3%;
+                height: 600px;
+                width: 82vw;
+            }
+        }
+    }
+    
+}

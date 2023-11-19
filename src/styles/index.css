@@ -665,14 +665,121 @@ LARGE SCREEN
   }
 }
 
-.contact-container {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
+.contact {
   height: 100vh;
+  width: auto;
   background-color: rgb(245, 243, 243);
-}
-.contact-container h1 {
   font-family: "Oswald", sans-serif;
-  font-size: 7rem;
+}
+.contact .contact-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.contact .contact-box .message-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contact .contact-box .message-column .message-element {
+  padding-top: 5px;
+  margin: 0px;
+}
+.contact .contact-box .message-column .message-element .message-element__title {
+  font-size: 1.5rem;
+  border: solid #F88017;
+  border-top: none;
+  border-inline: none;
+}
+.contact .contact-box .message-column .message-element input {
+  border-bottom: 2px solid #F88017;
+  border-top: 2px solid rgb(245, 243, 243);
+  border-inline: 2px solid rgb(245, 243, 243);
+  width: 100%;
+  color: rgba(59, 49, 49, 0.507);
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(245, 243, 243);
+  transition: 400ms ease-in;
+}
+.contact .contact-box .message-column .message-element input::-moz-placeholder {
+  font-size: 0.8rem;
+  padding-left: 20px;
+  font-family: "Oswald", sans-serif;
+}
+.contact .contact-box .message-column .message-element input::placeholder {
+  font-size: 0.8rem;
+  padding-left: 20px;
+  font-family: "Oswald", sans-serif;
+}
+.contact .contact-box .message-column .message-element input:focus {
+  border-bottom: 3px solid #42ac79;
+  outline: none;
+}
+.contact .contact-box .message-column .message-element textarea {
+  border-bottom: 2px solid #F88017;
+  border-top: 2px solid rgb(245, 243, 243);
+  border-inline: 2px solid rgb(245, 243, 243);
+  padding-top: 5px;
+  width: 100%;
+  color: rgba(59, 49, 49, 0.507);
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(245, 243, 243);
+  transition: 400ms;
+}
+.contact .contact-box .message-column .message-element textarea::-moz-placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 0.8rem;
+  padding-left: 20px;
+}
+.contact .contact-box .message-column .message-element textarea::placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 0.8rem;
+  padding-left: 20px;
+}
+.contact .contact-box .message-column .message-element textarea:focus {
+  border-bottom: 3px solid #42ac79;
+  outline: none;
+}
+.contact .contact-box .message-column .message-button {
+  padding-top: 10px;
+  margin: auto;
+}
+.contact .contact-box .message-column .message-button button {
+  border: 2px solid rgb(245, 243, 243);
+  border-radius: 10%;
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(245, 243, 243);
+  transition: 400ms ease-in-out;
+}
+.contact .contact-box .message-column .message-button button:hover {
+  border: 2px solid #F88017;
+  padding-inline: 15px;
+  cursor: pointer;
+}
+.contact .contact-box .message-column .message-button button:active {
+  border: 2px solid #42ac79;
+  color: #F88017;
+}
+.contact .contact-box .contact-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+.contact .contact-box .contact-column .contact-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 15px;
+  margin: 0px;
+}
+.contact .contact-box .contact-column .contact-element span:nth(n+1) {
+  padding-left: 15px;
+}
+.contact .contact-box .contact-column .contact-element .contact-element__title {
+  font-size: 1.5rem;
+  border: solid #F88017;
+  border-top: none;
+  border-inline: none;
 }/*# sourceMappingURL=index.css.map */

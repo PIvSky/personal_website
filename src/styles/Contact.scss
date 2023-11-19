@@ -1,15 +1,162 @@
 @import './Colors.scss';
 @import './Base.scss';
+@import './Utilities.scss';
 
-.contact-container {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+.contact {
     height: 100vh;
+    width: auto;
     background-color: map-get($colors, background );
+    font-family: map-get($fonts, basic-font );
+
+    .contact-box {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+
+        .message-column{
+            padding-top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
     
-    h1 {
-        font-family: map-get($fonts, basic-font );
-        font-size: 7rem;
+            .message-element {
+                padding-top: 5px;
+                margin: 0px;
+        
+                .message-element__title {
+                    @include title-section
+                }
+                
+                input {
+                    border-bottom: 2px solid map-get($colors, secondary );
+                    border-top: 2px solid map-get($colors, background );
+                    border-inline: 2px solid map-get($colors, background );
+                    width: 100%;
+                    color: map-get($colors, hover );
+                    font-family: map-get($fonts, basic-font );
+                    background-color: map-get($colors, background );
+                    transition: 400ms ease-in;
+        
+                    &::placeholder {
+                        font-size: 0.8rem;
+                        padding-left: 20px;
+                        font-family: map-get($fonts, basic-font );
+                    }
+
+                    &:focus {
+                        border-bottom: 3px solid map-get($colors, bottle-green);
+                        outline: none;
+                    }
+
+                }
+                textarea {
+                    border-bottom: 2px solid map-get($colors, secondary );
+                    border-top: 2px solid map-get($colors, background );
+                    border-inline: 2px solid map-get($colors, background );
+                    padding-top: 5px;
+                    width: 100%;
+                    color: map-get($colors, hover );
+                    font-family: map-get($fonts, basic-font );
+                    background-color: map-get($colors, background );
+                    transition: 400ms;
+
+                    &::placeholder{
+                        font-family: map-get($fonts, basic-font );
+                        font-size: 0.8rem;
+                        padding-left: 20px;
+                    }
+                    &:focus {
+                        border-bottom: 3px solid map-get($colors, bottle-green);
+                        outline: none;
+                    }
+                }
+            }
+            .message-button {
+                padding-top: 10px;
+                margin: auto;
+
+                button {
+                    border: 2px solid map-get($colors, background );
+                    border-bottom: 2px solid map-get($colors, secondary );
+
+                    border-radius: 10%;
+                    font-family: map-get($fonts, basic-font );
+                    background-color: map-get($colors, background );
+                    transition: 400ms ease-in-out;
+
+                    &:hover{
+                        border: 2px solid map-get($colors, secondary );
+                        padding-inline: 15px;
+                        cursor: pointer;
+                    }
+
+                    &:active {
+                        border: 2px solid map-get($colors, bottle-green );
+                        color: map-get($colors, secondary );
+                    }
+                }
+            }
+        }
+    
+        .contact-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 20px;
+            font-family: map-get($fonts, basic-font );
+    
+            .contact-element {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 15px;
+                margin: 0px;              
+                
+                img {
+                    scale: 0.5;
+                }
+    
+                .contact-element__title {
+                    @include title-section
+                }
+
+                .contact-element__phone, 
+                .contact-element__adress,
+                .contact-element__email {
+                    padding-left: 15px;
+                    color: map-get($colors, hover );
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .contact {
+    
+        .contact-box {
+            justify-content: space-around;
+            flex-direction: row;
+
+            .message-column {
+                padding-top: 30px;
+                padding-right: 20px;
+
+                .message-element:nth-child(1) {
+                    padding-top: 0px;
+                }
+            }
+
+            .contact-column {
+                padding-top: 30px;
+                padding-left: 20px;
+
+                .contact-element:nth-child(1) {
+                    padding-top: 0px;
+                }
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ const WorksTemplate = ({title, content, src, key}) => {
                 <p className='works-content'>{content}</p>
                 <div className="works-video-container">
                         <iframe 
-                        title='{`Video of + ${title}`}'
+                        title={`Video of + ${title}`}
                         key={key}
                         width="300" 
                         height="300" 

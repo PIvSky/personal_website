@@ -29,7 +29,7 @@
                 }
                 
                 input {
-                    border-bottom: 2px solid map-get($colors, secondary );
+                    border-bottom: 2px solid map-get($colors, hover );
                     border-top: 2px solid map-get($colors, background );
                     border-inline: 2px solid map-get($colors, background );
                     width: 100%;
@@ -45,13 +45,13 @@
                     }
 
                     &:focus {
-                        border-bottom: 3px solid map-get($colors, bottle-green);
+                        border-bottom: 2px solid map-get($colors, bottle-green);
                         outline: none;
                     }
 
                 }
                 textarea {
-                    border-bottom: 2px solid map-get($colors, secondary );
+                    border-bottom: 2px solid map-get($colors, hover );
                     border-top: 2px solid map-get($colors, background );
                     border-inline: 2px solid map-get($colors, background );
                     padding-top: 5px;
@@ -60,6 +60,8 @@
                     font-family: map-get($fonts, basic-font );
                     background-color: map-get($colors, background );
                     transition: 400ms;
+                    resize: none;
+                    overflow: hidden;
 
                     &::placeholder{
                         font-family: map-get($fonts, basic-font );
@@ -67,7 +69,7 @@
                         padding-left: 20px;
                     }
                     &:focus {
-                        border-bottom: 3px solid map-get($colors, bottle-green);
+                        border-bottom: 2px solid map-get($colors, bottle-green);
                         outline: none;
                     }
                 }
@@ -137,7 +139,7 @@
     .contact {
     
         .contact-box {
-            justify-content: space-around;
+            justify-content: space-evenly;
             flex-direction: row;
 
             .message-column {

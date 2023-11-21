@@ -7,6 +7,7 @@ import Pianist from './components/Pianist';
 import Works from './components/Works';
 import Contact from './components/Contact';
 import ErrorPage from './components/ErrorPage';
+import Dev from './components/Dev';
 // stylesheet
 import './styles/App.scss';
 
@@ -21,6 +22,7 @@ const websiteRoutes = createBrowserRouter([
       { path: '/bio', element: <Bio/>},
       { path: '/pianist/*', element: <Pianist/>},
       { path: '/works/*', element: <Works/>},
+      { path: '/dev', element: <Dev/>},
     ],
   }
 ])

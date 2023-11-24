@@ -4,6 +4,8 @@
 @import './Colors.scss';
 // utilities (margin, padding, etc.)
 @import './Utilities.scss';
+//  ANIMATE.SASS
+@import "../../node_modules/animate-sass/animate";
 // components
 @import './HomePage.scss';
 @import './ImageSlider.scss';

@@ -33,6 +33,35 @@
   }
 }
 
+/*
+FONTS
+*/
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+body {
+  -webkit-backface-visibility: hidden;
+}
+
+.animated {
+  animation-duration: calc( 1s );
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+.animated.hinge {
+  animation-duration: calc( 1s * 2 );
+}
+.animated.bounceIn, .animated.bounceOut {
+  animation-duration: calc( 1s * 0.75 );
+}
+.animated.flipOutX, .animated.flipOutY {
+  animation-duration: calc( 1s * 0.75 );
+}
+
 * {
   margin: 0px;
   font-size: 18px;
@@ -58,6 +87,9 @@
   }
 }
 
+/*
+FONTS
+*/
 /* 
 SMALL SCREEN
 */
@@ -176,6 +208,9 @@ LARGE SCREEN
   }
 }
 
+/*
+FONTS
+*/
 /* 
 SMALL SCREEN
 */
@@ -263,6 +298,9 @@ LARGE SCREEN
   }
 }
 
+/*
+FONTS
+*/
 .pianist-wrapper {
   background-color: rgb(245, 243, 243);
   height: 100%;
@@ -294,6 +332,9 @@ LARGE SCREEN
   }
 }
 
+/*
+FONTS
+*/
 .pianonav-container {
   display: flex;
   justify-content: center;
@@ -369,6 +410,9 @@ LARGE SCREEN
   }
 }
 
+/*
+FONTS
+*/
 .band-container {
   display: flex;
   flex-direction: column;
@@ -432,6 +476,9 @@ LARGE SCREEN
   }
 }
 
+/*
+FONTS
+*/
 .works-wrapper {
   background-color: rgb(245, 243, 243);
   height: 100%;
@@ -478,6 +525,9 @@ LARGE SCREEN
   }
 }
 
+/*
+FONTS
+*/
 main {
   display: flex;
   justify-content: center;
@@ -522,6 +572,9 @@ main p {
   }
 }
 
+/*
+FONTS
+*/
 /* 
 SMALL SCREEN
 */
@@ -665,6 +718,9 @@ LARGE SCREEN
   }
 }
 
+/*
+FONTS
+*/
 .contact {
   height: 100vh;
   width: auto;
@@ -723,7 +779,6 @@ LARGE SCREEN
   border-inline: 2px solid rgb(245, 243, 243);
   padding-top: 5px;
   width: 100%;
-  height: auto;
   color: rgba(59, 49, 49, 0.507);
   font-family: "Oswald", sans-serif;
   background-color: rgb(245, 243, 243);

@@ -27,8 +27,18 @@
     }
 }
 
+/*
+FONTS
+*/
+
 $fonts : (
     basic-font: ('Oswald', sans-serif),
+);
+
+$font-size: (
+    big-title: 1.5rem,
+    small-title: 1.1rem,
+    content: 0.8rem
 );
  
 $fonts-weight : (

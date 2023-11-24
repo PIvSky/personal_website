@@ -1,11 +1,10 @@
 import { useState} from 'react';
-import 'animate.css';
+// import 'animate.css';
 import '../styles/Dev.scss';
 import cvImg from '../assets/cv/cv-image.jpg';
 import githubIcon from '../assets/icons/icons8-github-50.png';
 import linkedinIcon from '../assets/icons/icons8-linkedin-50.png';
 import downloadIcon from '../assets/icons/icons8-download-50.png';
-// import { saveAs } from 'file-saver';
 import cvPdf from '../assets/cv/iwanskicv.pdf';
 
 const Dev = () => {

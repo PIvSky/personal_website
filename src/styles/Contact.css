@@ -30,7 +30,7 @@ FONTS
 .contact {
   height: 100vh;
   width: auto;
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(245, 245, 245);
   font-family: "Oswald", sans-serif;
 }
 .contact .contact-box {
@@ -51,18 +51,18 @@ FONTS
 }
 .contact .contact-box .message-column .message-element .message-element__title {
   font-size: 1.5rem;
-  border: solid #F88017;
+  border: 3px solid #F88017;
   border-top: none;
   border-inline: none;
 }
 .contact .contact-box .message-column .message-element input {
-  border-bottom: 2px solid rgba(59, 49, 49, 0.507);
-  border-top: 2px solid rgb(245, 243, 243);
-  border-inline: 2px solid rgb(245, 243, 243);
+  border-bottom: 2px solid rgba(59, 49, 49, 0.5058823529);
+  border-top: 2px solid rgb(245, 245, 245);
+  border-inline: 2px solid rgb(245, 245, 245);
   width: 100%;
-  color: rgba(59, 49, 49, 0.507);
+  color: rgba(59, 49, 49, 0.5058823529);
   font-family: "Oswald", sans-serif;
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(245, 245, 245);
   transition: 400ms ease-in;
 }
 .contact .contact-box .message-column .message-element input::-moz-placeholder {
@@ -79,15 +79,20 @@ FONTS
   border-bottom: 2px solid #42ac79;
   outline: none;
 }
+.contact .contact-box .message-column .message-element .message-element__validation {
+  font-size: 0.6rem;
+  font-style: italic;
+  padding-bottom: 3px;
+}
 .contact .contact-box .message-column .message-element textarea {
-  border-bottom: 2px solid rgba(59, 49, 49, 0.507);
-  border-top: 2px solid rgb(245, 243, 243);
-  border-inline: 2px solid rgb(245, 243, 243);
+  border-bottom: 2px solid rgba(59, 49, 49, 0.5058823529);
+  border-top: 2px solid rgb(245, 245, 245);
+  border-inline: 2px solid rgb(245, 245, 245);
   padding-top: 5px;
   width: 100%;
-  color: rgba(59, 49, 49, 0.507);
+  color: rgba(59, 49, 49, 0.5058823529);
   font-family: "Oswald", sans-serif;
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(245, 245, 245);
   transition: 400ms;
   resize: none;
   overflow: hidden;
@@ -110,22 +115,22 @@ FONTS
   padding-top: 10px;
   margin: auto;
 }
-.contact .contact-box .message-column .message-button button {
-  border: 2px solid rgb(245, 243, 243);
-  border-bottom: 2px solid #F88017;
-  border-radius: 10%;
+.contact .contact-box .message-column .message-button .message-button__item {
+  border: 3px solid rgb(245, 245, 245);
+  border-bottom: 3px solid rgba(59, 49, 49, 0.5058823529);
   font-family: "Oswald", sans-serif;
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(245, 245, 245);
   transition: 400ms ease-in-out;
 }
-.contact .contact-box .message-column .message-button button:hover {
-  border: 2px solid #F88017;
+.contact .contact-box .message-column .message-button .message-button__item:hover {
+  border: 3px solid #F88017;
+  border-radius: 10rem;
   padding-inline: 15px;
   cursor: pointer;
 }
-.contact .contact-box .message-column .message-button button:active {
-  border: 2px solid #42ac79;
-  color: #F88017;
+.contact .contact-box .message-column .message-button .message-button__item:active {
+  transition: none;
+  color: #42ac79;
 }
 .contact .contact-box .contact-column {
   display: flex;
@@ -147,7 +152,7 @@ FONTS
 }
 .contact .contact-box .contact-column .contact-element .contact-element__title {
   font-size: 1.5rem;
-  border: solid #F88017;
+  border: 3px solid #F88017;
   border-top: none;
   border-inline: none;
 }
@@ -155,7 +160,7 @@ FONTS
 .contact .contact-box .contact-column .contact-element .contact-element__adress,
 .contact .contact-box .contact-column .contact-element .contact-element__email {
   padding-left: 15px;
-  color: rgba(59, 49, 49, 0.507);
+  color: rgba(59, 49, 49, 0.5058823529);
 }
 
 @media screen and (min-width: 760px) {

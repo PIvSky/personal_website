@@ -45,7 +45,7 @@ header .nav-title {
   font-weight: 400;
 }
 header .nav-title:hover {
-  color: rgba(59, 49, 49, 0.507);
+  color: rgba(59, 49, 49, 0.5058823529);
 }
 header .nav {
   z-index: 5;
@@ -81,10 +81,10 @@ header .nav .nav-list .nav-list__item a {
   cursor: pointer;
 }
 header .nav .nav-list .nav-list__item a:hover {
-  color: rgba(59, 49, 49, 0.507);
+  color: rgba(59, 49, 49, 0.5058823529);
 }
 header .nav .nav-list .nav-list__item a.active {
-  color: rgba(59, 49, 49, 0.507);
+  color: rgba(59, 49, 49, 0.5058823529);
 }
 header .responsive_nav {
   transform: none;
@@ -121,7 +121,7 @@ LARGE SCREEN
     border-inline: 0px;
     border-bottom-width: 2px;
     border-style: solid;
-    border-color: rgba(59, 49, 49, 0.507);
+    border-color: rgba(59, 49, 49, 0.5058823529);
   }
   header .nav-title {
     padding-left: 3rem;

@@ -54,7 +54,7 @@ FONTS
   cursor: pointer;
 }
 .pianonav-container .pianonav-nav .pianonav-nav__item:hover {
-  color: rgba(59, 49, 49, 0.507);
+  color: rgba(59, 49, 49, 0.5058823529);
 }
 .pianonav-container .pianonav-nav .active {
   color: #F88017;

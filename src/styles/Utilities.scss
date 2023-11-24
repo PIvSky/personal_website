@@ -1,7 +1,7 @@
 // ORANGE UNDERSCORE
 @mixin title-section {
     font-size: 1.5rem;
-    border: solid map-get($colors, secondary );
+    border: 3px solid map-get($colors, secondary );
     border-top: none;
     border-inline: none;
 };

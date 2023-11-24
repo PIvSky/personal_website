@@ -2,7 +2,6 @@
 @import './Base.scss';
 @import './Utilities.scss';
 
-
 .contact {
     height: 100vh;
     width: auto;
@@ -20,6 +19,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+
     
             .message-element {
                 padding-top: 5px;
@@ -49,7 +49,14 @@
                         border-bottom: 2px solid map-get($colors, bottle-green);
                         outline: none;
                     }
+                }
 
+                
+
+                .message-element__validation {
+                    font-size: 0.6rem;
+                    font-style: italic;
+                    padding-bottom: 3px;
                 }
                 textarea {
                     border-bottom: 2px solid map-get($colors, hover );
@@ -74,29 +81,31 @@
                         outline: none;
                     }
                 }
+
+                
             }
+
             .message-button {
                 padding-top: 10px;
                 margin: auto;
 
-                button {
-                    border: 2px solid map-get($colors, background );
-                    border-bottom: 2px solid map-get($colors, secondary );
-
-                    border-radius: 10%;
+                .message-button__item {
+                    border: 3px solid map-get($colors, background );
+                    border-bottom: 3px solid map-get($colors, hover );
                     font-family: map-get($fonts, basic-font );
                     background-color: map-get($colors, background );
                     transition: 400ms ease-in-out;
 
                     &:hover{
-                        border: 2px solid map-get($colors, secondary );
+                        border: 3px solid map-get($colors, secondary );
+                        border-radius: 10rem;
                         padding-inline: 15px;
                         cursor: pointer;
                     }
 
                     &:active {
-                        border: 2px solid map-get($colors, bottle-green );
-                        color: map-get($colors, secondary );
+                        transition: none;
+                        color: map-get($colors, bottle-green );
                     }
                 }
             }

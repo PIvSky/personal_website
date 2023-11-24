@@ -57,22 +57,15 @@ FONTS
 }
 .dev-wrapper .dev-container .dev-header .dev-header__icons a {
   cursor: pointer;
-  transition: all 0.3s;
-}
-.dev-wrapper .dev-container .dev-header .dev-header__icons a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.dev-wrapper .dev-container .dev-header .dev-header__icons a:hover:before {
-  width: 100%;
-}
-.dev-wrapper .dev-container .dev-header .dev-header__icons a:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  animation-duration: 2s;
 }
 .dev-wrapper .dev-container .dev-header .dev-header__icons a img {
   scale: 0.6;
   cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.dev-wrapper .dev-container .dev-header .dev-header__icons a img:hover {
+  scale: 0.8;
 }
 .dev-wrapper .dev-container .dev-about .dev-about__title {
   padding-top: 10px;
@@ -214,9 +207,13 @@ FONTS
 .dev-wrapper .dev-container .dev-cv .dev-header .dev-header__button img {
   scale: 0.6;
   cursor: pointer;
+  transition: 400ms ease-in-out;
+}
+.dev-wrapper .dev-container .dev-cv .dev-header .dev-header__button img:hover {
+  scale: 0.8;
 }
 .dev-wrapper .dev-container .dev-cv .dev-header span {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   z-index: 3;
   transition: 400ms ease-in-out;
 }

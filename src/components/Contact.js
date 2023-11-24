@@ -3,6 +3,7 @@ import '../styles/Contact.scss';
 import AdressImg from '../assets/icons/icons8-placeholder-50.png';
 import PhoneImg from '../assets/icons/icons8-phone-50.png';
 import EmailImg from '../assets/icons/email-icons8-mail-50.png';
+import 'animate.css';
 
 
 const Contact = () => {

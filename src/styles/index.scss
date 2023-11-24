@@ -1,11 +1,13 @@
+@import 'animate.css/animate.min.css';
+
 // base
 @import './Base.scss';
 // colors
 @import './Colors.scss';
 // utilities (margin, padding, etc.)
 @import './Utilities.scss';
-//  ANIMATE.SASS
-@import "../../node_modules/animate-sass/animate";
+// animase.scss
+@import '~animate.css/animate.css';
 // components
 @import './HomePage.scss';
 @import './ImageSlider.scss';
@@ -13,6 +15,7 @@
 @import './Pianist.scss';
 @import './PianoNav.scss';
 @import './BandTemplate.scss';
+@import './Dev.scss';
 @import './Works.scss';
 @import './ErrorPage.scss';
 @import './Navigation.scss';

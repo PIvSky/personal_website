@@ -1,3 +1,6 @@
+@import 'animate.css/animate.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+@import '~animate.css/animate.css';
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
@@ -36,32 +39,6 @@
 /*
 FONTS
 */
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-Copyright (c) 2015 Daniel Eden
-*/
-body {
-  -webkit-backface-visibility: hidden;
-}
-
-.animated {
-  animation-duration: calc( 1s );
-  animation-fill-mode: both;
-}
-.animated.infinite {
-  animation-iteration-count: infinite;
-}
-.animated.hinge {
-  animation-duration: calc( 1s * 2 );
-}
-.animated.bounceIn, .animated.bounceOut {
-  animation-duration: calc( 1s * 0.75 );
-}
-.animated.flipOutX, .animated.flipOutY {
-  animation-duration: calc( 1s * 0.75 );
-}
-
 * {
   margin: 0px;
   font-size: 18px;
@@ -449,6 +426,256 @@ FONTS
 @media screen and (min-width: 1024px) {
   .band-container .band-video-container {
     padding-top: 30px;
+  }
+}
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+FONTS
+*/
+.dev-wrapper {
+  background-color: rgb(245, 243, 243);
+  width: 100%;
+  padding: 0px;
+  margin: 0px auto;
+}
+.dev-wrapper .dev-container {
+  padding: 10px 15px 20px;
+  height: auto;
+  font-family: "Oswald", sans-serif;
+  color: rgb(34, 34, 34);
+}
+.dev-wrapper .dev-container .dev-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.dev-wrapper .dev-container .dev-header .dev-header__title {
+  display: inline-block; /*with this we have border only under the text*/
+  font-size: 1.5rem;
+  border: solid #F88017;
+  border-top: none;
+  border-inline: none;
+  padding: 0px;
+}
+.dev-wrapper .dev-container .dev-header .dev-header__icons {
+  padding-left: 20px;
+}
+.dev-wrapper .dev-container .dev-header .dev-header__icons a {
+  cursor: pointer;
+}
+.dev-wrapper .dev-container .dev-header .dev-header__icons a img {
+  scale: 0.6;
+  cursor: pointer;
+}
+.dev-wrapper .dev-container .dev-about .dev-about__title {
+  padding-top: 10px;
+  font-size: 1.1rem;
+}
+.dev-wrapper .dev-container .dev-about .dev-about__content {
+  padding-top: 20px;
+  font-size: 0.8rem;
+  overflow: auto;
+  word-wrap: break-word;
+  text-indent: 10px;
+}
+.dev-wrapper .dev-container .dev-about .dev-about__content:nth-last-child(n) {
+  padding-top: 0px;
+}
+.dev-wrapper .dev-container .dev-about .dev-about__technologies {
+  padding-top: 10px;
+  padding-left: 0px;
+  -moz-column-count: 3;
+       column-count: 3;
+  text-align: center;
+}
+.dev-wrapper .dev-container .dev-about .dev-about__technologies li {
+  list-style: none;
+  font-size: 0.8rem;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__title {
+  padding-top: 10px;
+  font-size: 1.1rem;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container {
+  padding-top: 10px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div {
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div p {
+  font-size: 0.8rem;
+  padding-bottom: 10px;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div button {
+  font-size: 1.1rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.08em;
+  max-width: 100%;
+  width: 12em;
+  margin: auto;
+  background-color: #42ac79;
+  border: none;
+  padding-inline: 0.85rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #42ac79;
+  border-color: #42ac79;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #F88017;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #F88017;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div button:hover:before {
+  width: 100%;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__container div button a {
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.dev-wrapper .dev-container .dev-projects .dev-projects__other {
+  padding-top: 15px;
+}
+.dev-wrapper .dev-container .dev-projects ul {
+  padding-top: 10px;
+  padding-left: 0px;
+  -moz-column-count: 3;
+       column-count: 3;
+  text-align: center;
+}
+.dev-wrapper .dev-container .dev-projects ul li {
+  list-style: none;
+  font-size: 0.8rem;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
+}
+.dev-wrapper .dev-container .dev-cv .dev-header {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dev-wrapper .dev-container .dev-cv .dev-header .dev-header__title {
+  font-size: 1.1rem;
+}
+.dev-wrapper .dev-container .dev-cv .dev-header .dev-header__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.dev-wrapper .dev-container .dev-cv .dev-header .dev-header__button img {
+  scale: 0.6;
+  cursor: pointer;
+}
+.dev-wrapper .dev-container .dev-cv .dev-header span {
+  font-size: 1.1rem;
+  z-index: 3;
+  transition: 400ms ease-in-out;
+}
+.dev-wrapper .dev-container .dev-cv .dev-img {
+  padding-top: 20px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.dev-wrapper .dev-container .dev-cv .dev-img .dev-img__item {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+MEDIUM SCREEN
+*/
+@media screen and (min-width: 760px) {
+  .dev-wrapper .dev-container .dev-projects .dev-projects__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .dev-wrapper .dev-container .dev-projects .dev-projects__container div {
+    width: 40%;
+  }
+}
+/* 
+LARGE SCREEN
+*/
+@media screen and (min-width: 1024px) {
+  .dev-wrapper .dev-container {
+    margin: auto;
+    width: 70%;
+  }
+  .dev-wrapper .dev-container .dev-about .dev-about__technologies {
+    padding-inline: 0px;
+    margin: auto;
   }
 }
 * {

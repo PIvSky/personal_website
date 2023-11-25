@@ -31,7 +31,7 @@ FONTS
 SMALL SCREEN
 */
 header {
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(245, 245, 245);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +61,7 @@ header .nav {
   width: 100%;
   transition: 1.5s;
   transform: translateY(-100vh);
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(245, 245, 245);
   color: rgb(34, 34, 34);
 }
 header .nav .nav-list {

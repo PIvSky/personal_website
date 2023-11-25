@@ -8,32 +8,26 @@
         position: absolute;
         top: 50%;
         left: 32px;
-        transform: translate(0, -50%);
-        font-size: 95px;
-        color: map-get($colors, whiten );
         z-index: 1;
-        cursor: pointer;
-        transition: 1s;
-        &:hover {
-            transform: translate(0, -45%) scale(1.3);
-            // scale: 1.3;
-            color: map-get($colors, error );
+        .left-arrow__image {
+            transition: 1s ease-in-out;
+            cursor: pointer;
+                &:hover {
+                    transform:scale(1.2);
+                }        
         }
     }
     .right-arrow {
         position: absolute;
         top: 50%;
         right: 32px;
-        transform: translate(0, -50%);
-        font-size: 95px;
-        color: map-get($colors, whiten);
         z-index: 1;
-        transition: 1s;
-        cursor: pointer;
-        &:hover {
-            // scale: 1.3;
-            transform: translate(0, -45%) scale(1.3);
-            color: map-get($colors, error );
+        .right-arrow__image {
+            transition: 1s ease-in-out;
+            cursor: pointer;
+                &:hover {
+                    transform:scale(1.2);
+                }       
         }
     }
 
@@ -59,11 +53,23 @@
             
             .dots-container__items{
                 margin: 0px 4px;
-                font-size: 6rem;
-                color: map-get($colors, whiten);
-                cursor: pointer;
-                &:hover {
-                    color: map-get($colors, secondary);
+                // color: map-get($colors, whiten);
+                // cursor: pointer;
+                // &:hover {
+                //     color: map-get($colors, secondary);
+                // }
+                svg {
+                    
+                    .dot-image {
+                        &:active {
+                            fill: map-get($colors, secondary);
+                            // transform: scale(1.2);
+                        }
+                        &:focus {
+                            fill: map-get($colors, secondary);
+                            // transform: scale(1.2);
+                        }
+                    }
                 }
             }
         }

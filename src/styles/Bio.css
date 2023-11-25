@@ -31,7 +31,7 @@ FONTS
 SMALL SCREEN
 */
 .bio-wrapper {
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(245, 245, 245);
   display: flex;
   align-items: flex-start;
   flex-direction: column;

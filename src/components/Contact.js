@@ -1,12 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/Contact.scss';
 import AdressImg from '../assets/icons/icons8-placeholder-50.png';
 import PhoneImg from '../assets/icons/icons8-phone-50.png';
 import EmailImg from '../assets/icons/email-icons8-mail-50.png';
-import {validName, validEmail, validPhone, validMessage} from '../validation/RegEx';
+import {validName, validEmail, validPhone} from '../validation/RegEx';
 
 const Contact = () => {
 
+    const form = useRef();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -20,6 +22,7 @@ const Contact = () => {
     const refButton = useRef(null);
     const initialErrors = {name: "", email: "", phonenumber: "", message: ""}
     const [formErrors, setFormErrors] = useState(initialErrors);
+    // emailjs ref
 
     // INPUT STATES
     const nameChangeHandler = (event) => {
@@ -62,17 +65,6 @@ const Contact = () => {
         };
     }, [])
 
-    // HANDLER OF FORM
-    const ContactHandler = (event) => {
-        event.preventDefault();
-        console.log(name, email, phone, message)
-        // clear input values
-        setName('');
-        setEmail('');
-        setPhone('');
-        setMessage('')
-    }
-
     /*
     VALIDATION FUNCTIONS
     */
@@ -87,9 +79,11 @@ const Contact = () => {
         if(validName.test(name) && validEmail.test(email) && message.length > 0){
             setButtonDisabled(false)
             refButtonStyle.borderColor =  '#F88017';
+            refButtonStyle.cursor = 'pointer'
         } else {
             setButtonDisabled(true)
             refButtonStyle.borderColor = '#f5f3f3';
+            refButtonStyle.cursor = 'crosshair'
         }
 
         // input validations
@@ -143,18 +137,48 @@ const Contact = () => {
         // }
 
     }, [name, email, phone, message]);
+
+    // EMAILJS API
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm(
+            'service_g2ofe15',
+            'template_h0z5jjw', 
+            form.current, 
+            'ulJtPOUQPTfSAUx5o')
+          .then((result) => {
+              console.log(result.text);
+              alert('Message send. Thank You!');
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
+
+    // HANDLER OF FORM
+    // const ContactHandler = (event) => {
+    //     event.preventDefault();
+    //     // clear input values
+    //     setName('');
+    //     setEmail('');
+    //     setPhone('');
+    //     setMessage('')
+    //     console.log(name, email, phone, message)
+    // };
     
 
     return (
         <>
-            <form className='contact'>
+            <div className='contact'>
                 <div className='contact-box'>
-                    <div className='message-column'>
+                    <form ref={form} onSubmit={sendEmail} className='message-column'>
                         <div className='message-element'>
                             <span className='message-element__title'>SEND ME A MESSAGE</span>
                         </div>
                         <div className='message-element'>
                             <input 
+                                name='contact_name'
                                 placeholder='FULL NAME'
                                 ref={refInputName}
                                 value={name}
@@ -164,6 +188,7 @@ const Contact = () => {
                         </div>
                         <div className='message-element'>
                             <input 
+                                name='contact_email'
                                 placeholder='YOUR EMAIL'
                                 ref={refInputEmail}
                                 value={email}
@@ -173,6 +198,7 @@ const Contact = () => {
                         </div>
                         <div className='message-element'>
                             <input 
+                                name='contact_phone'
                                 placeholder='PHONE(not required)'
                                 ref={refInputPhone}
                                 value={phone}
@@ -182,6 +208,7 @@ const Contact = () => {
                         </div>
                         <div className='message-element'>
                             <textarea 
+                                name='contact_message'
                                 ref={textareaRef}
                                 placeholder='YOUR MESSAGE'
                                 rows={3}
@@ -192,15 +219,17 @@ const Contact = () => {
                         </div>
                         <div className='message-button'>
                             <button 
-                                ref={refButton}
                                 className='message-button__item' 
-                                onClick={ContactHandler}
+                                type='submit'
+                                value='Send'
+                                ref={refButton}
+                                // onClick={ContactHandler}
                                 disabled={buttonDisabled}
                             >
                             SEND
                             </button>
                         </div>
-                    </div>
+                    </form>
                     <div className='contact-column'>
                         <div className='contact-element'>
                             <span className='contact-element__title'>CONTACT ME</span>
@@ -220,7 +249,7 @@ const Contact = () => {
                     </div>
                 </div>
                 
-            </form>
+            </div>
         </>
     )
 }

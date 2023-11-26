@@ -121,16 +121,19 @@ FONTS
   font-family: "Oswald", sans-serif;
   background-color: rgb(245, 245, 245);
   transition: 400ms ease-in-out;
+  border-radius: 10rem;
 }
 .contact .contact-box .message-column .message-button .message-button__item:hover {
   border: 3px solid #F88017;
-  border-radius: 10rem;
   padding-inline: 15px;
   cursor: pointer;
 }
 .contact .contact-box .message-column .message-button .message-button__item:active {
   transition: none;
   color: #42ac79;
+}
+.contact .contact-box .message-column .message-button .message-button__item:focus {
+  border: 3px solid #F88017;
 }
 .contact .contact-box .contact-column {
   display: flex;

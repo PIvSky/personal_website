@@ -2,7 +2,6 @@ import {useState, useRef, useEffect} from 'react';
 import '../styles/ImageSlider.scss';
 import arrowBack from '../assets/slider-img/arrow-back.png';
 import arrowForward from '../assets/slider-img/arrow-forward.png';
-import dot from '../assets/slider-img/dot.png';
 
 const ImageSlider = ({slides}) => {
 

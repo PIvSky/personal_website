@@ -95,10 +95,10 @@
                     font-family: map-get($fonts, basic-font );
                     background-color: map-get($colors, background );
                     transition: 400ms ease-in-out;
+                    border-radius: 10rem;
 
                     &:hover{
                         border: 3px solid map-get($colors, secondary );
-                        border-radius: 10rem;
                         padding-inline: 15px;
                         cursor: pointer;
                     }
@@ -106,6 +106,10 @@
                     &:active {
                         transition: none;
                         color: map-get($colors, bottle-green );
+                    }
+
+                    &:focus {
+                        border: 3px solid map-get($colors, secondary );
                     }
                 }
             }

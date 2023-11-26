@@ -12,7 +12,8 @@ const ImageSlider = ({slides}) => {
     const imageForwardArrowRef = useRef(null);
 
     //  ARROW FUNCTIONALITIES
-    const prevSlide = () => {
+    const prevSlide = (e) => {
+        e.preventDefault();
         if (currentIndex > 0){
             setCurrentIndex(currentIndex - 1)
         } else {
@@ -38,11 +39,13 @@ const ImageSlider = ({slides}) => {
         imageForwardArrowRef.current.style.transform = `rotate(${rotateRightValue}deg)`;
       }, [isLeftRotated, isRightRotated]);
     
-      const rotateLeftArrow = () => {
+      const rotateLeftArrow = (e) => {
+        e.preventDefault()
         setIsLeftRotated(!isLeftRotated);
       };
     
-      const rotateRightArrow = () => {
+      const rotateRightArrow = (e) => {
+        e.preventDefault()
         setIsRightRotated(!isRightRotated);
       };
 
@@ -84,8 +87,8 @@ const ImageSlider = ({slides}) => {
             {slides.map((slides ,index) => (
                 <div className='dots-container__items' key={index} onClick={() => currentSlide(index)}>
                     {/* <img alt='slider-dot' src={dot} className='dot-image'></img> */}
-                    <svg height="100" width="80" onClick={prevSlide}>
-                        <circle className='dot-image' cx="50" cy="50" r="12" fill={currentIndex === index ? '#F88017' : '#fff'} />
+                    <svg height="20" width="20" onClick={prevSlide}>
+                        <circle className='dot-image' cx="10" cy="10" r="5" fill={currentIndex === index ? '#F88017' : '#fff'} />
                     </svg> 
                 </div>
             ))}

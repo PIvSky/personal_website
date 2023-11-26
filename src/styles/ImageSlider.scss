@@ -39,35 +39,28 @@
         background-position: center;
         background-size: cover;
         // upgrade this transition in future!
-        transition: 0.4s ease-out;
+        transition: 0.4s ease-in-out;
         
         .dots-container{
             // centered position
-            position: absolute;
-            bottom: 0px;
+            // position: absolute;
+            bottom: 20px;
             left: 50%; /* This gets beginning of dots container on middle of parrent */
             transform: translateX(-50%); /* Takes this container 50% on left of its width */
-            // text-align: center;
             display: flex;
             flex-direction: row;
             
             .dots-container__items{
-                margin: 0px 4px;
-                // color: map-get($colors, whiten);
-                // cursor: pointer;
-                // &:hover {
-                //     color: map-get($colors, secondary);
-                // }
+ 
                 svg {
-                    
+                    padding-inline: 5px;
                     .dot-image {
+                        cursor: pointer;
                         &:active {
                             fill: map-get($colors, secondary);
-                            // transform: scale(1.2);
                         }
                         &:focus {
                             fill: map-get($colors, secondary);
-                            // transform: scale(1.2);
                         }
                     }
                 }

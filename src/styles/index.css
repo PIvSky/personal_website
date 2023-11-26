@@ -146,8 +146,8 @@ LARGE SCREEN
   display: flex;
   flex-direction: row;
 }
-.slides-container .slides-container__item .dots-container .dots-container__items {
-  margin: 0px 4px;
+.slides-container .slides-container__item .dots-container .dots-container__items svg .dot-image {
+  margin: auto;
 }
 .slides-container .slides-container__item .dots-container .dots-container__items svg .dot-image:active {
   fill: #F88017;
@@ -1038,21 +1038,28 @@ FONTS
   outline: none;
 }
 .contact .contact-box .message-column .message-button {
+  padding-top: 10px;
   margin: auto;
 }
 .contact .contact-box .message-column .message-button .message-button__item {
+  border: 3px solid rgb(245, 245, 245);
+  border-bottom: 3px solid rgba(59, 49, 49, 0.5058823529);
   font-family: "Oswald", sans-serif;
+  background-color: rgb(245, 245, 245);
   transition: 400ms ease-in-out;
+  border-radius: 10rem;
 }
 .contact .contact-box .message-column .message-button .message-button__item:hover {
   border: 3px solid #F88017;
-  border-radius: 10rem;
   padding-inline: 15px;
   cursor: pointer;
 }
 .contact .contact-box .message-column .message-button .message-button__item:active {
   transition: none;
   color: #42ac79;
+}
+.contact .contact-box .message-column .message-button .message-button__item:focus {
+  border: 3px solid #F88017;
 }
 .contact .contact-box .contact-column {
   display: flex;

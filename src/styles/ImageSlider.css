@@ -39,14 +39,13 @@
 }
 .slides-container .slides-container__item .dots-container {
   position: absolute;
-  bottom: 0px;
   left: 50%; /* This gets beginning of dots container on middle of parrent */
   transform: translateX(-50%); /* Takes this container 50% on left of its width */
   display: flex;
   flex-direction: row;
 }
-.slides-container .slides-container__item .dots-container .dots-container__items {
-  margin: 0px 4px;
+.slides-container .slides-container__item .dots-container .dots-container__items svg .dot-image {
+  margin: auto;
 }
 .slides-container .slides-container__item .dots-container .dots-container__items svg .dot-image:active {
   fill: #F88017;

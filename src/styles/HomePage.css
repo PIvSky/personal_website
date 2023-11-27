@@ -42,8 +42,7 @@ SMALL SCREEN
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
 }
-
-.slides-wrapper {
+.home-container .slides-wrapper {
   width: 800px;
   height: 600px;
   margin: 10px auto;
@@ -53,9 +52,12 @@ SMALL SCREEN
 LARGE SCREEN
 */
 @media screen and (min-width: 1023px) {
-  .slides-wrapper {
+  .home-container {
+    height: auto;
+  }
+  .home-container .slides-wrapper {
     width: 800px;
     height: 800px;
-    margin: 40px auto;
+    margin: 20px auto;
   }
 }/*# sourceMappingURL=HomePage.css.map */

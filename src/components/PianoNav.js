@@ -7,12 +7,17 @@ import gant from '../assets/pianist-img/photo-11.jpg';
 
 const Nav = () => {
 
+    const scrollToContent = () => {
+        window.scrollBy({ top: 500, behavior: 'smooth' });
+      };
+
     return (
         <>
             <nav className="pianonav-container">
                 <ul className="pianonav-nav">
                     <li className="link-container">
                         <NavLink
+                            onClick={scrollToContent}
                             to='timelapse'
                             className={({ isActive }) => isActive ? 'active pianonav-nav__item' : 'pianonav-nav__item'}
                         >
@@ -22,6 +27,7 @@ const Nav = () => {
                     </li>
                     <li className="link-container">
                         <NavLink
+                            onClick={scrollToContent}
                             to='grzecznichlopcy'
                             className={({ isActive }) => isActive ? 'active pianonav-nav__item' : 'pianonav-nav__item'}
                         >
@@ -31,6 +37,7 @@ const Nav = () => {
                     </li>
                     <li className="link-container">
                         <NavLink
+                            onClick={scrollToContent}
                             to='gwo'
                             className={({ isActive }) => isActive ? 'active pianonav-nav__item' : 'pianonav-nav__item'}
                         >
@@ -40,6 +47,7 @@ const Nav = () => {
                     </li>
                     <li className="link-container">
                         <NavLink
+                            onClick={scrollToContent}
                             to='gant&sava'
                             className={({ isActive }) => isActive ? 'active pianonav-nav__item' : 'pianonav-nav__item'}
                         >

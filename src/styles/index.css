@@ -74,8 +74,7 @@ SMALL SCREEN
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 10px;
-  height: 100vh;
+  height: 110lvh;
   background-color: rgb(245, 245, 245);
 }
 .home-container h1 {
@@ -136,18 +135,21 @@ LARGE SCREEN
   border-radius: 50px;
   background-position: center;
   background-size: cover;
-  transition: 0.4s ease-out;
+  transition: 0.4s ease-in-out;
 }
 .slides-container .slides-container__item .dots-container {
   position: absolute;
-  bottom: 0px;
+  bottom: 20px;
   left: 50%; /* This gets beginning of dots container on middle of parrent */
   transform: translateX(-50%); /* Takes this container 50% on left of its width */
   display: flex;
   flex-direction: row;
 }
+.slides-container .slides-container__item .dots-container .dots-container__items svg {
+  padding-inline: 5px;
+}
 .slides-container .slides-container__item .dots-container .dots-container__items svg .dot-image {
-  margin: auto;
+  cursor: pointer;
 }
 .slides-container .slides-container__item .dots-container .dots-container__items svg .dot-image:active {
   fill: #F88017;
@@ -1005,6 +1007,12 @@ FONTS
   border-bottom: 2px solid #42ac79;
   outline: none;
 }
+.contact .contact-box .message-column .message-element input:-webkit-autofill, .contact .contact-box .message-column .message-element input:-webkit-autofill::first-line {
+  -webkit-transition: background-color 50000s ease-in-out 0s;
+  transition: background-color 50000s ease-in-out 0s;
+  -webkit-text-fill-color: rgba(59, 49, 49, 0.5058823529);
+  background-color: rgb(245, 245, 245) !important;
+}
 .contact .contact-box .message-column .message-element .message-element__validation {
   font-size: 0.6rem;
   font-style: italic;
@@ -1051,7 +1059,6 @@ FONTS
 }
 .contact .contact-box .message-column .message-button .message-button__item:hover {
   border: 3px solid #F88017;
-  padding-inline: 15px;
   cursor: pointer;
 }
 .contact .contact-box .message-column .message-button .message-button__item:active {
@@ -1059,7 +1066,9 @@ FONTS
   color: #42ac79;
 }
 .contact .contact-box .message-column .message-button .message-button__item:focus {
-  border: 3px solid #F88017;
+  outline: 15px;
+  padding-inline: 15px;
+  background-color: #F88017;
 }
 .contact .contact-box .contact-column {
   display: flex;

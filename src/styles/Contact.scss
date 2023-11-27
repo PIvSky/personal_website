@@ -48,8 +48,19 @@
                     &:focus {
                         border-bottom: 2px solid map-get($colors, bottle-green);
                         outline: none;
+                        // background-color: map-get($colors, background);
+                    }
+                    // autofill styles
+                    &:-webkit-autofill,
+                    &:-webkit-autofill::first-line {
+                        // 'never ending' transition postpone in time autofill of background color
+                        transition: background-color 50000s ease-in-out 0s;
+                        -webkit-text-fill-color: map-get($colors, hover);
+                        background-color: map-get($colors, background) !important;
                     }
                 }
+                
+                    
 
                 
 
@@ -99,7 +110,6 @@
 
                     &:hover{
                         border: 3px solid map-get($colors, secondary );
-                        padding-inline: 15px;
                         cursor: pointer;
                     }
 
@@ -109,7 +119,9 @@
                     }
 
                     &:focus {
-                        border: 3px solid map-get($colors, secondary );
+                        outline: 15px;
+                        padding-inline: 15px;
+                        background-color: map-get($colors, secondary );
                     }
                 }
             }

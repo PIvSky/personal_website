@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap");
+* {
+  margin: 0px;
+  font-size: 18px;
+  cursor: crosshair;
+  /* it's probably wrong, but it fixed problem with wrapped 
+  or not band-container in pianist component */
+}
+@media screen and (min-width: 1024px) {
+  * {
+    /* 
+        Fade-in animation for navigation
+    */
+    opacity: 0;
+    animation: fade-in 450ms ease-in forwards;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+FONTS
+*/
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-wrapper .popup {
+  position: fixed;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 300px;
+  border: none;
+  border-radius: 8%;
+  background-color: rgb(245, 245, 245);
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.popup-wrapper .popup .popup-title, .popup-wrapper .popup .popup-text, .popup-wrapper .popup form {
+  padding-top: 15px;
+}
+.popup-wrapper .popup form .popup-button {
+  border: 3px solid #F88017;
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(245, 245, 245);
+  transition: 400ms ease-in-out;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.popup-wrapper .popup form .popup-button:hover {
+  padding-inline: 15px;
+}/*# sourceMappingURL=PopupModal.css.map */

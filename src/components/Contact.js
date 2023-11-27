@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import PopupModal from './PopupModal';
 import '../styles/Contact.scss';
 import AdressImg from '../assets/icons/icons8-placeholder-50.png';
 import PhoneImg from '../assets/icons/icons8-phone-50.png';
@@ -8,7 +9,9 @@ import {validName, validEmail, validPhone} from '../validation/RegEx';
 
 const Contact = () => {
 
-    const form = useRef();
+    // popup state
+    const [showPopup, setShowPopup] = useState(false);
+    // input states
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -22,7 +25,8 @@ const Contact = () => {
     const refButton = useRef(null);
     const initialErrors = {name: "", email: "", phonenumber: "", message: ""}
     const [formErrors, setFormErrors] = useState(initialErrors);
-    // emailjs ref
+    // emailjs 
+    const form = useRef();
 
     // INPUT STATES
     const nameChangeHandler = (event) => {
@@ -150,29 +154,41 @@ const Contact = () => {
             'ulJtPOUQPTfSAUx5o')
           .then((result) => {
               console.log(result.text);
-              alert('Message send. Thank You!');
+            //   alert('Message send. Thank You!');
           }, (error) => {
               console.log(error.text);
           });
       };
 
     // HANDLER OF FORM
-    // const ContactHandler = (event) => {
-    //     event.preventDefault();
-    //     // clear input values
-    //     setName('');
-    //     setEmail('');
-    //     setPhone('');
-    //     setMessage('')
-    //     console.log(name, email, phone, message)
-    // };
-    
+    const ContactHandler = () => {
+        setShowPopup(true);
+        console.log(name, email, phone, message)
+    };
+
+    const onClosePopup = () => {
+        // clear input values
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+        // close popup
+        setShowPopup(false);
+    };
 
     return (
         <>
+            {showPopup && <PopupModal
+                name={name}
+                onClick={onClosePopup}
+            />
+            }
             <div className='contact'>
                 <div className='contact-box'>
-                    <form ref={form} onSubmit={sendEmail} className='message-column'>
+                    <form 
+                        ref={form} 
+                        onSubmit={sendEmail} 
+                        className='message-column'>
                         <div className='message-element'>
                             <span className='message-element__title'>SEND ME A MESSAGE</span>
                         </div>
@@ -223,7 +239,7 @@ const Contact = () => {
                                 type='submit'
                                 value='Send'
                                 ref={refButton}
-                                // onClick={ContactHandler}
+                                onClick={ContactHandler}
                                 disabled={buttonDisabled}
                             >
                             SEND

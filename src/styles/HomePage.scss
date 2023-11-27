@@ -4,7 +4,6 @@
 /* 
 SMALL SCREEN
 */
-
 .home-container {
     display: flex;
     justify-content: center;
@@ -17,25 +16,25 @@ SMALL SCREEN
         font-family: map-get($fonts, basic-font );
         font-size: 2rem;
     }
-}
 
-.slides-wrapper {
-    width: 800px;
-    height:600px;
-    margin: 10px auto;
-    // border-radius: 50px;
-    // background-color: map-get($colors, background );
+    .slides-wrapper {
+        width: 800px;
+        height:600px;
+        margin: 10px auto;
+        // border-radius: 50px;
+        // background-color: map-get($colors, background );
+    }
 }
-
 /* 
 LARGE SCREEN
 */
-
 @media screen and (min-width: 1023px) {
-    .slides-wrapper {
-        width: 800px;
-        height:800px;
-        margin: 40px auto;
-
+    .home-container{
+        height: auto;
+        .slides-wrapper {
+            width: 800px;
+            height:800px;
+            margin: 20px auto;
+        }
     }
 }

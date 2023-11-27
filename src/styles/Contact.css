@@ -79,6 +79,12 @@ FONTS
   border-bottom: 2px solid #42ac79;
   outline: none;
 }
+.contact .contact-box .message-column .message-element input:-webkit-autofill, .contact .contact-box .message-column .message-element input:-webkit-autofill::first-line {
+  -webkit-transition: background-color 50000s ease-in-out 0s;
+  transition: background-color 50000s ease-in-out 0s;
+  -webkit-text-fill-color: rgba(59, 49, 49, 0.5058823529);
+  background-color: rgb(245, 245, 245) !important;
+}
 .contact .contact-box .message-column .message-element .message-element__validation {
   font-size: 0.6rem;
   font-style: italic;
@@ -125,7 +131,6 @@ FONTS
 }
 .contact .contact-box .message-column .message-button .message-button__item:hover {
   border: 3px solid #F88017;
-  padding-inline: 15px;
   cursor: pointer;
 }
 .contact .contact-box .message-column .message-button .message-button__item:active {
@@ -133,7 +138,9 @@ FONTS
   color: #42ac79;
 }
 .contact .contact-box .message-column .message-button .message-button__item:focus {
-  border: 3px solid #F88017;
+  outline: 15px;
+  padding-inline: 15px;
+  background-color: #F88017;
 }
 .contact .contact-box .contact-column {
   display: flex;

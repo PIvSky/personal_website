@@ -43,7 +43,7 @@
         
         .dots-container{
             // centered position
-            // position: absolute;
+            position: absolute;
             bottom: 20px;
             left: 50%; /* This gets beginning of dots container on middle of parrent */
             transform: translateX(-50%); /* Takes this container 50% on left of its width */

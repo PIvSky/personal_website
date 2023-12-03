@@ -38,6 +38,8 @@ const ImageSlider = ({slides}) => {
         imageBackArrowRef.current.style.transform = `rotate(${rotateLeftValue}deg)`;
         imageForwardArrowRef.current.style.transform = `rotate(${rotateRightValue}deg)`;
       }, [isLeftRotated, isRightRotated]);
+
+      // question: are you sure it's good to use useEffect here? I ask, because it's the first time I see sth like this. I'd rather use a CSS class with a transition property on click.
     
       const rotateLeftArrow = (e) => {
         e.preventDefault()

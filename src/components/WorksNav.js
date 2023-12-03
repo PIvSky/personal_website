@@ -25,6 +25,19 @@ const Nav = ({onClick}) => {
                         COMPOSER
                         </NavLink>
                     </li>
+
+                     {/* suggestion: consider mapping here using an array of an objects:
+                     const arr= [
+                        {
+                            title: 'ARRANGER',
+                            link: '/arranger'
+                        },
+                        {
+                            title: 'COMPOSER',
+                            link: '/composer'
+                        }
+                     ]
+                     */}
                 </ul>
             </nav>
         </>

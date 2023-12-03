@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import PopupModal from './PopupModal';
 import '../styles/Contact.scss';
-import AdressImg from '../assets/icons/icons8-placeholder-50.png';
+import AdressImg from '../assets/icons/icons8-placeholder-50.png'; // issue: typo in the name of the file. Should be AddressImg
 import PhoneImg from '../assets/icons/icons8-phone-50.png';
 import EmailImg from '../assets/icons/email-icons8-mail-50.png';
 import {validName, validEmail, validPhone} from '../validation/RegEx';
@@ -16,6 +16,8 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('')
+
+    // suggestion: this code is perfectly fine, but if you had time to improve it, it's the perfect place to use useReducer here. You can also consider using one useState with an object, ie.: const [form, setForm] = useState({name: '', email: '', phone: '', message: ''})
     const textareaRef = useRef();
     // validation states
     const [buttonDisabled, setButtonDisabled] = useState(true);
@@ -44,6 +46,28 @@ const Contact = () => {
     const messageChangeHandler = (event) => {
         setMessage(event.target.value);
     }
+
+    // suggestion: look, here you have four functions that basically do the same. You could add the second parameter to check the type, ie: 
+    // const inputChangeHandler = (event, type) => { 
+    //     switch(type) { 
+    //         case 'name': setName(event.target.value); 
+    //         break; 
+    //         case 'email': setEmail(event.target.value); 
+    //         break; 
+    //         case 'phone': setPhone(event.target.value); 
+    //         break; 
+    //         case 'message': setMessage(event.target.value); 
+    //         break; 
+    //         default: break; } } 
+    // and then use it like this: 
+    // <input onChange={(event) => inputChangeHandler(event, 'name')} />.
+    // It's not a must, but it's a good practice to avoid code duplication.
+    // Or, if you had a one useState with an object, you could do something like this:
+    // const inputChangeHandler = (event, type) => {
+    //     setForm(prevForm => ({...prevForm, [type]: event.target.value}))
+    // }
+    // and then use it like this:
+    // <input onChange={(event) => inputChangeHandler(event, 'name')} />.
 
     /* 
         Auto Resizing Textarea 
@@ -99,7 +123,7 @@ const Contact = () => {
         } else if (!validName.test(name) && name !== "") {
             setFormErrors(prevFormErrors => ({...prevFormErrors, name: "Min. 3, and only letters."}))
             refNameStyle.borderBottom = '2px solid red'
-        } else if (name.length === 0) {
+        } else if (name.length === 0) { // issue: this condition doesn't make sense. If the name is empty, it's not valid, so it should be red.
             setFormErrors(prevFormErrors => ({...prevFormErrors, name: ""}))
             refNameStyle.borderBottom = '2px solid #3b313181'
         }
@@ -109,7 +133,7 @@ const Contact = () => {
             setFormErrors(prevFormErrors => ({...prevFormErrors, email: ""}))
             refEmailStyle.borderBottom = '2px solid #42ac79'
         } else if (!validEmail.test(email) && email !== "") {
-            setFormErrors(prevFormErrors => ({...prevFormErrors, email: "Please, write valid email adress."}))
+            setFormErrors(prevFormErrors => ({...prevFormErrors, email: "Please, write valid email adress."})) // issue: typo in the word "address"
             refEmailStyle.borderBottom = '2px solid red'
         } else if (email.length === 0) {
             setFormErrors(prevFormErrors => ({...prevFormErrors, email: ""}))
@@ -128,6 +152,12 @@ const Contact = () => {
             refPhoneStyle.borderBottom = '2px solid #3b313181'
         }
 
+        // issue: I don't like this ref usage. It's not a good practice to use refs to change styles. You can use a class instead and change it with a conditional rendering, ie.:
+        // <input className={validName.test(name) ? 'valid' : 'invalid'} />
+        // and then in the css file:
+        // .valid { border-bottom: 2px solid #42ac79; }
+        // .invalid { border-bottom: 2px solid red; }
+
         // // TEXT AREA
         // if(validMessage.test(message)){
         //     setFormErrors(prevFormErrors => ({...prevFormErrors, message: ""}))
@@ -139,6 +169,7 @@ const Contact = () => {
         //     setFormErrors(prevFormErrors => ({...prevFormErrors, message: ""}))
         //     refNameStyle.borderBottom = '2px solid #3b313181'
         // }
+        // issue: if you don't use this code, remove it. Don't leave it that way :)
 
     }, [name, email, phone, message]);
 
@@ -154,7 +185,7 @@ const Contact = () => {
             'ulJtPOUQPTfSAUx5o')
           .then((result) => {
               console.log(result.text);
-            //   alert('Message send. Thank You!');
+            //   alert('Message send. Thank You!'); // issue: commented code
           }, (error) => {
               console.log(error.text);
           });
@@ -177,97 +208,102 @@ const Contact = () => {
     };
 
     return (
-        <>
-            {showPopup && <PopupModal
-                name={name}
-                onClick={onClosePopup}
-            />
-            }
-            <div className='contact'>
-                <div className='contact-box'>
-                    <form 
-                        ref={form} 
-                        onSubmit={sendEmail} 
-                        className='message-column'>
-                        <div className='message-element'>
-                            <span className='message-element__title'>SEND ME A MESSAGE</span>
-                        </div>
-                        <div className='message-element'>
-                            <input 
-                                name='contact_name'
-                                placeholder='FULL NAME'
-                                ref={refInputName}
-                                value={name}
-                                onChange={nameChangeHandler}
-                            ></input>
-                            <p className='message-element__validation'>{formErrors.name}</p>
-                        </div>
-                        <div className='message-element'>
-                            <input 
-                                name='contact_email'
-                                placeholder='YOUR EMAIL'
-                                ref={refInputEmail}
-                                value={email}
-                                onChange={emailChangeHandler}
-                            ></input>
-                            <p className='message-element__validation'>{formErrors.email}</p>
-                        </div>
-                        <div className='message-element'>
-                            <input 
-                                name='contact_phone'
-                                placeholder='PHONE(not required)'
-                                ref={refInputPhone}
-                                value={phone}
-                                onChange={phoneChangeHandler}
-                            ></input>
-                            <p className='message-element__validation'>{formErrors.phonenumber}</p>
-                        </div>
-                        <div className='message-element'>
-                            <textarea 
-                                name='contact_message'
-                                ref={textareaRef}
-                                placeholder='YOUR MESSAGE'
-                                rows={3}
-                                value={message}
-                                onChange={messageChangeHandler}    
-                            ></textarea>
-                            {/* <p className='message-element__validation'>{formErrors.message}</p> */}
-                        </div>
-                        <div className='message-button'>
-                            <button 
-                                className='message-button__item' 
-                                type='submit'
-                                value='Send'
-                                ref={refButton}
-                                onClick={ContactHandler}
-                                disabled={buttonDisabled}
-                            >
-                            SEND
-                            </button>
-                        </div>
-                    </form>
-                    <div className='contact-column'>
-                        <div className='contact-element'>
-                            <span className='contact-element__title'>CONTACT ME</span>
-                        </div>
-                        <div className='contact-element'>
-                            <img alt='adress-icon' src={AdressImg}></img>
-                            <span className='contact-element__adress'>WARSAW</span>
-                        </div> 
-                        <div className='contact-element'>
-                            <img alt='adress-icon' src={PhoneImg}></img>
-                            <span className='contact-element__phone'>+48 509 618 644</span>
-                        </div>   
-                        <div className='contact-element'>
-                            <img alt='adress-icon' src={EmailImg}></img>
-                            <span className='contact-element__email'>iwansky.piano@gmail.com</span>
-                        </div>
-                    </div>
-                </div>
-                
+      <>
+        {showPopup && <PopupModal name={name} onClick={onClosePopup} />}
+        <div className="contact">
+          <div className="contact-box">
+            <form ref={form} onSubmit={sendEmail} className="message-column">
+              <div className="message-element">
+                <span className="message-element__title">
+                  SEND ME A MESSAGE
+                </span>
+              </div>
+              <div className="message-element">
+                <input
+                  name="contact_name"
+                  placeholder="FULL NAME"
+                  ref={refInputName} // issue: no need for a ref here. See the comment above
+                  value={name}
+                  onChange={nameChangeHandler}
+                ></input>
+                <p className="message-element__validation">{formErrors.name}</p>
+              </div>
+              <div className="message-element">
+                <input
+                  name="contact_email"
+                  placeholder="YOUR EMAIL"
+                  ref={refInputEmail} // issue: no need for a ref here. See the comment above
+                  value={email}
+                  onChange={emailChangeHandler}
+                ></input>
+                <p className="message-element__validation">
+                  {formErrors.email}
+                </p>
+              </div>
+              <div className="message-element">
+                <input
+                  name="contact_phone"
+                  placeholder="PHONE(not required)"
+                  ref={refInputPhone} // issue: no need for a ref here. See the comment above
+                  value={phone}
+                  onChange={phoneChangeHandler}
+                ></input>
+                <p className="message-element__validation">
+                  {formErrors.phonenumber}
+                </p>
+              </div>
+              <div className="message-element">
+                <textarea
+                  name="contact_message"
+                  ref={textareaRef} // issue: no need for a ref here. See the comment above
+                  placeholder="YOUR MESSAGE"
+                  rows={3}
+                  value={message}
+                  onChange={messageChangeHandler}
+                ></textarea>
+                {/* <p className='message-element__validation'>{formErrors.message}</p> */}
+              </div>
+              <div className="message-button">
+                <button
+                  className="message-button__item"
+                  type="submit"
+                  value="Send"
+                  ref={refButton} // issue: no need for a ref here. See the comment above
+                  onClick={ContactHandler}
+                  disabled={buttonDisabled}
+                >
+                  SEND
+                </button>
+              </div>
+            </form>
+            <div className="contact-column">
+              <div className="contact-element">
+                <span className="contact-element__title">CONTACT ME</span>
+              </div>
+              <div className="contact-element">
+                <img alt="adress-icon" src={AdressImg}></img>
+                <span className="contact-element__adress">WARSAW</span>
+              </div>
+              <div className="contact-element">
+                <img alt="adress-icon" src={PhoneImg}></img>
+                <span className="contact-element__phone">+48 509 618 644</span>
+              </div>
+              <div className="contact-element">
+                <img alt="adress-icon" src={EmailImg}></img>
+                <span className="contact-element__email">
+                  iwansky.piano@gmail.com
+                </span>
+              </div>
+              {/* suggestion: what about making some abstraction here? You can
+              create a component that will take an icon and a text as props and
+              render it. Then you can use it like this:
+              <ContactElement icon={AdressImg} text="WARSAW" />
+              or you could make an array and just map through it. Check the typos as well, should be "address" */}
             </div>
-        </>
-    )
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default Contact;

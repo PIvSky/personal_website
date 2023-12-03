@@ -3,7 +3,7 @@ import WorksTemplate from "./WorksTemplate";
 const data = [
     {
         title: "RESERVED",
-        id: Math.random(),
+        id: Math.random(), // question: does it need to be random? It's not well suited for a key and not seen as a good practice. For the sake of this exercise, it's better to use 1,2,3,4...
         content: "Arrangement and play on the piano song 'Yes Sir, I Can Boogie' by Baccara. You can also watch me on this movie.",
         src: 'https://www.youtube.com/embed/OuMAGX6es7I?si=JVInVY9Y4LpCEgD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"'
     },
@@ -26,6 +26,8 @@ const data = [
         src: 'https://www.youtube.com/embed/oQsftb7ppCA?si=l3zFE2wlEmv_fuSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     }
 ]
+
+// suggestion: you can put data in a separate file in the "utils" folder and import it here
 
 const Arranger = () => {
     return (

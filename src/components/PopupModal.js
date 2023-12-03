@@ -5,7 +5,8 @@ const PopupModal = ({name, onClick}) => {
         <div className='popup-wrapper'>
             <div className="popup" open>
                 <h2 className="popup-title">Thank You {name}!</h2>
-                <p className="popup-text">Your message was send!</p>
+                <p className="popup-text">Your message was send!</p> 
+                {/* issue: typo: should be 'sent' */}
                 <form method="dialog">
                     <button 
                         className="popup-button"

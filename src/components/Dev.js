@@ -1,5 +1,5 @@
 import { useState} from 'react';
-// import 'animate.css';
+// import 'animate.css'; // issue: commented code
 import '../styles/Dev.scss';
 import cvImg from '../assets/cv/cv-image.jpg';
 import githubIcon from '../assets/icons/icons8-github-50.png';
@@ -35,6 +35,8 @@ const Dev = () => {
                 alink.click();
             });
         });
+
+        // praise: that's fucking cool!
     };
 
     return (

@@ -3,7 +3,7 @@ import WorksTemplate from "./WorksTemplate";
 const data = [
     {
         title: "GCH+ - ŚWINA",
-        id: Math.random(),
+        id: Math.random(), // suggestion: I'd rather not use Math.random here. Use integers instead. 
         content: "Composed for 'Timelapse'. This composition is inspired by the river flowing through Świnoujście.",
         src: 'https://www.youtube.com/embed/7CHfIw1VXBo?si=eun4KCvmzrA3U8e-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     },

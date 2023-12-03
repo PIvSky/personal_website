@@ -17,7 +17,7 @@ const Nav = () => {
                 <ul className="pianonav-nav">
                     <li className="link-container">
                         <NavLink
-                            onClick={scrollToContent}
+                            onClick={scrollToContent} // issue: UX issue - the whole li should be clickable, especially that there is an interaction when hover on the photo
                             to='timelapse'
                             className={({ isActive }) => isActive ? 'active pianonav-nav__item' : 'pianonav-nav__item'}
                         >

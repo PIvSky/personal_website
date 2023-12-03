@@ -26,7 +26,7 @@ const websiteRoutes = createBrowserRouter([
       { path: '/dev', element: <Dev/>},
     ],
   }
-])
+]) // praise: great way to make an abstraction instead of add ech import in the return function
 
 function App() {
   return (

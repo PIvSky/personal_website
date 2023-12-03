@@ -82,6 +82,19 @@ const Navigation = () => {
                     </button>
                 </ul>
             </nav>
+            {/* praise: nice usage of a semantic HTML
+            suggestion: there is a lot of duplicated code here. It would be nice to map through it using an array of an objects
+            const arr = [
+                {
+                    title: 'HOME',
+                    link: '/'
+                },
+                {
+                    title: 'BIO',
+                    link: '/bio'
+                }
+            ]
+            */}
             <button className='nav-btn' onClick={showNavbar}>
                 <FaBars/>
             </button>

@@ -74,15 +74,15 @@ SMALL SCREEN
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 110lvh;
+  padding: 10px;
+  height: 100vh;
   background-color: rgb(245, 245, 245);
 }
 .home-container h1 {
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
 }
-
-.slides-wrapper {
+.home-container .slides-wrapper {
   width: 800px;
   height: 600px;
   margin: 10px auto;
@@ -92,10 +92,13 @@ SMALL SCREEN
 LARGE SCREEN
 */
 @media screen and (min-width: 1023px) {
-  .slides-wrapper {
+  .home-container {
+    height: auto;
+  }
+  .home-container .slides-wrapper {
     width: 800px;
     height: 800px;
-    margin: 40px auto;
+    margin: 20px auto;
   }
 }
 .slides-container {

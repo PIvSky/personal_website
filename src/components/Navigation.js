@@ -24,7 +24,7 @@ const Navigation = () => {
     return (
         <header>
             <div>
-                <h3 className='nav-title' onClick={navigateHandler}>Piotr Iwański</h3>
+                <h1 className='nav-title' onClick={navigateHandler}>Piotr Iwański</h1>
             </div>
             <nav className='nav' ref={navRef}>
                 <ul className='nav-list'>

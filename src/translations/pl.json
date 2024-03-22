@@ -1,0 +1,10 @@
+{
+    "navbar" : {
+        "home": "HOME",
+        "bio": "O MNIE",
+        "pianist": "PIANISTA",
+        "arranger/composer" : "ARANŻER/KOMPOZYTOR",
+        "dev" : "PROGRAMISTa",
+        "contact" : "KONTAKT"
+    }
+}

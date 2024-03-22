@@ -3,8 +3,11 @@ import { NavLink, useNavigate} from 'react-router-dom';
 import {FaBars, FaTimes} from 'react-icons/fa'
 // import styles from './Navigation.module.scss';
 import '../styles/Navigation.scss'
+import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
+
+    const [t, i18n] = useTranslation("global");
 
     const navRef = useRef();
     const navigate = useNavigate()
@@ -34,7 +37,7 @@ const Navigation = () => {
                             className={({ isActive }) => isActive ? 'active' : ''}
                             onClick={showNavbar}
                             end
-                        >HOME
+                        >{t("navbar[1]")}
                         </NavLink>
                     </li>
                     <li className='nav-list__item'>

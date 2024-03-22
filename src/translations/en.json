@@ -1,0 +1,10 @@
+{
+    "navbar" : {
+        "home": "HOME",
+        "bio": "BIO",
+        "pianist": "PIANIST",
+        "arranger/composer" : "ARRANGER/COMPOSER",
+        "dev" : "DEV",
+        "contact" : "CONTACT"
+    }
+}

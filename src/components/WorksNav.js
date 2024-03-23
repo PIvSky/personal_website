@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import '../styles/WorksNav.scss';
+import { useTranslation } from "react-i18next";
 
 const Nav = ({onClick}) => {
+
+    const [t] = useTranslation("global");
 
     return (
         <>
@@ -13,7 +16,7 @@ const Nav = ({onClick}) => {
                             to='arranger'
                             className={({ isActive }) => isActive ? 'active worksnav-nav__item' : 'worksnav-nav__item'}
                         >
-                        ARRANGER
+                        {t("works-nav.arranger")}
                         </NavLink>
                     </li>
                     <li className="link-container">
@@ -22,7 +25,7 @@ const Nav = ({onClick}) => {
                             to='composer'
                             className={({ isActive }) => isActive ? 'active worksnav-nav__item' : 'worksnav-nav__item'}
                         >
-                        COMPOSER
+                        {t("works-nav.composer")}
                         </NavLink>
                     </li>
                 </ul>

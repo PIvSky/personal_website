@@ -3,11 +3,11 @@ import { NavLink, useNavigate} from 'react-router-dom';
 import {FaBars, FaTimes} from 'react-icons/fa'
 // import styles from './Navigation.module.scss';
 import '../styles/Navigation.scss'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
 
-    const [t, i18n] = useTranslation("global");
+    const [t] = useTranslation("global")
 
     const navRef = useRef();
     const navigate = useNavigate()
@@ -37,7 +37,7 @@ const Navigation = () => {
                             className={({ isActive }) => isActive ? 'active' : ''}
                             onClick={showNavbar}
                             end
-                        >{t("navbar[1]")}
+                        >{t("navbar.home")}
                         </NavLink>
                     </li>
                     <li className='nav-list__item'>
@@ -45,7 +45,7 @@ const Navigation = () => {
                             to="/bio"
                             className={({ isActive }) => isActive ? 'active' : ''}
                             onClick={showNavbar}
-                        >BIO
+                        >{t("navbar.bio")}
                         </NavLink>
                     </li>
                     <li className='nav-list__item'>
@@ -53,7 +53,7 @@ const Navigation = () => {
                             to="/pianist"
                             className={({ isActive }) => isActive ? 'active' : ''}
                             onClick={showNavbar}
-                        >PIANIST
+                        >{t("navbar.pianist")}
                         </NavLink>
                     </li>
                     <li className='nav-list__item'>
@@ -61,7 +61,7 @@ const Navigation = () => {
                             to="/works"
                             className={({ isActive }) => isActive ? 'active' : ''}
                             onClick={showNavbar}
-                        >ARRANGER/COMPOSER
+                        >{t("navbar.arranger/composer")}
                         </NavLink>
                     </li>
                     <li className='nav-list__item'>
@@ -69,7 +69,7 @@ const Navigation = () => {
                             to="/dev"
                             className={({ isActive }) => isActive ? 'active' : ''}
                             onClick={showNavbar}
-                        >DEV
+                        >{t("navbar.dev")}
                         </NavLink>
                     </li>
                     <li className='nav-list__item'>
@@ -77,7 +77,7 @@ const Navigation = () => {
                             to="/contact"
                             className={({ isActive }) => isActive ? 'active' : ''}
                             onClick={showNavbar}
-                        >CONTACT
+                        >{t("navbar.contact")}
                         </NavLink>
                     </li>
                     <button className='nav-btn__close' onClick={showNavbar}>

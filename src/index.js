@@ -4,30 +4,33 @@ import './styles/index.css';
 import App from './App';
 
 // translations imports
-import language_en from '../src/translations/en.json';
-import language_pl from '../src/translations/pl.json';
+
+import lang_en from '../src/translations/en/global.json';
+import lang_pl from '../src/translations/pl/global.json';
 import i18next from 'i18next';
-import { I18NextReactProvider } from 'i18next-react';
+import { I18nextProvider } from 'react-i18next';
+
 
 i18next.init({
   interpolation: { escapeValue: false },
   lng: "pl",
   resources: {
     pl: {
-      global: language_pl,
+      global: lang_pl,
     },
     en: {
-      global: language_en,
+      global: lang_en,
     }
   }
 })
 
+console.log(lang_pl.navbar.home)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <I18NextReactProvider i18next={i18next}>
+    <I18nextProvider i18n={i18next}>
       <App />
-    </I18NextReactProvider>
-    
+    </I18nextProvider>
   </React.StrictMode>
 );

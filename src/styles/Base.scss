@@ -6,9 +6,6 @@
     margin: 0px;
     font-size: 18px;
     cursor: crosshair;
-    /* it's probably wrong, but it fixed problem with wrapped 
-    or not band-container in pianist component */
-    // background-color: map-get($colors, background );
 
     @media screen and (min-width: 1024px) {
         /* 
@@ -25,6 +22,10 @@
             }
         }
     }
+}
+
+html {
+    background-color: map-get($colors, background );
 }
 
 /*

@@ -19,6 +19,11 @@
     "works-nav" : {
         "arranger" : "ARANŻER",
         "composer" : "KOMPOZYTOR"
+    },
+    "arranger" : {
+        "reserved" : "Aranżacja i wykonanie na fortepianie utworu Baccary 'Yes Sir, I Can Boogie'.",
+        "mozil" : "Aranżacja na orkiestrę symfoniczną utworu zespołu Farben Lehre.",
+        "maroon" : "Swingowa aranżacja na kwintet jazzowy popularnej piosenki zespołu Marron 5.",
+        "jackson" : "Aranżacja na kwintet jazzowy utworu Michaela Jacksona."
     }
-
 }

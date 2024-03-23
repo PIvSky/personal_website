@@ -19,6 +19,12 @@
     "works-nav" : {
         "arranger" : "ARRANGER",
         "composer" : "COMPOSER"
+    },
+    "arranger" : {
+        "reserved" : "Arrangement and play on the piano song 'Yes Sir, I Can Boogie' by Baccara. You can also watch me on this movie.",
+        "mozil" : "Arrangment for symphony orchestra a song of popular Polish Band Farben Lehre.",
+        "maroon" : "Swingin arrangement of popular Marron 5 song for jazz quintet.",
+        "jackson" : "Arrangment of Michael Jackson's song for jazz quintet."
     }
 
 

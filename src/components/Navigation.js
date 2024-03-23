@@ -7,8 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
 
-    const [t] = useTranslation("global")
-
+    const [t, i18n] = useTranslation("global")
     const navRef = useRef();
     const navigate = useNavigate()
 
@@ -22,6 +21,10 @@ const Navigation = () => {
         window.scrollTo({
             top: 0,
           });
+    }
+
+    const handleLanguageChange = (lang) => {
+        i18n.changeLanguage(lang);
     }
 
     return (
@@ -80,6 +83,10 @@ const Navigation = () => {
                         >{t("navbar.contact")}
                         </NavLink>
                     </li>
+                    <div className='nav-lang'>
+                        <button onClick={() => handleLanguageChange('en')} className='nav-lang__button'>EN</button>
+                        <button onClick={() => handleLanguageChange('pl')} className='nav-lang__button'>PL</button>
+                    </div>
                     <button className='nav-btn__close' onClick={showNavbar}>
                         <FaTimes/>
                     </button>

@@ -63,7 +63,30 @@ header {
                     color: map-get($colors, hover)
                 }
             }
-            
+
+            .nav-lang {
+                padding-top: 15px;
+                margin: 0 auto;
+                &__button {
+                    font-family: map-get($fonts, basic-font);
+                    font-size: 0.8rem;
+                    padding-inline: 10px;
+                    border: 1px solid map-get($colors, primary );
+                    border-top: none;
+                    border-bottom: none;
+                    background-color: map-get($colors, background);
+                    cursor: pointer;
+                }
+                &__button:nth-child(1){
+                    border-right: none;
+                }
+                &__button:hover {
+                    color: map-get($colors, hover)
+                }
+                &__button:active {
+                    color: map-get($colors, secondary );
+                }
+            }
         }
     }
 
@@ -125,6 +148,10 @@ LARGE SCREEN
                 flex-direction: row;
                 .nav-list__item{
                     padding-inline: 1.5rem;
+                }
+
+                .nav-lang {
+                    padding-top: 11px;
                 }
             }
         }

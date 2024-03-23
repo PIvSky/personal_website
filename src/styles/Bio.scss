@@ -33,7 +33,7 @@ SMALL SCREEN
         .bio-content{
             padding-top: 20px;
             padding-right: 10px;
-            font-size: 0.8rem;
+            font-size: map-get($font-size, content );
             overflow: auto;
             word-wrap: break-word;
         }

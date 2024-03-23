@@ -6,5 +6,10 @@
         "arranger/composer" : "ARRANGER/COMPOSER",
         "dev" : "DEV",
         "contact" : "CONTACT"
+    },
+
+    "bio" : {
+        "title" : "BIO",
+        "content" : "Piotr Iwański - pianist, arranger, composer, teacher. He got piano education from mentors such as Wojciech Majewski, Michał Tokaj, Andrzej Jagodziński and Marcin Banaszek. In center of his musical interests are jazz, songs, classical and film music. He performs as a solo pianist, accompanist and member of several bands of various musical natures (including Grzeczni Chłopcy, Gant & Sava, GCh+). As a pianist and director of a musical bands he performs in theaters (Komedia Theater, Jewish Theater, Lalka Theater). He cooperated with e.g: Czesław Mozil, Maja Kleszcz and Joanna Kulig. Piotr teaches in Jazz Piano Class at the Authors School of Popular Music and Jazz. in Warsaw. In music he appreciate frugality and restraint - so that each sound played carries greater responsibility."
     }
 }

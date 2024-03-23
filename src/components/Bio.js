@@ -1,5 +1,6 @@
 import '../styles/Bio.scss';
 import biophoto from '../assets/img/photo-3.jpg';
+import { useTranslation } from 'react-i18next';
 
 const data = {
     title: 'Bio',
@@ -8,11 +9,13 @@ const data = {
 
 function Bio() {
 
+    const [t] = useTranslation('global')
+
     return (
         <div className='bio-wrapper'>
             <div className="bio-container">
-                <h1 className='bio-title'>{data.title}</h1>
-                <p className='bio-content'>{data.content}</p>
+                <h1 className='bio-title'>{t('bio.title')}</h1>
+                <p className='bio-content'>{t('bio.content')}</p>
             </div>
             <div className='bio-image__wrapper'>
                 <img 

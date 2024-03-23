@@ -6,5 +6,10 @@
         "arranger/composer" : "ARANŻER/KOMPOZYTOR",
         "dev" : "PROGRAMISTA",
         "contact" : "KONTAKT"
+    },
+
+    "bio" : {
+        "title" : "O MNIE",
+        "content" : "Piotr Iwański - pianista, aranżer, kompozytor, pedagog.Zdobywał edukację muzyczną u Wojciecha Majewskiego, Michała Tokaja, Andrzeja Jagodzińskiego i Marcina Banaszka. Centrum jego muzycznych zainteresowań stanowią jazz, piosenki, muzyka klasyczna i filmowa. Koncertuje jako pianista solowy, akompaniator oraz członej kilku zespołów, tj. Grzeczni Chłopcy, Gant & Sava, GCh+. Występuje również jako pianista i kierownik zespołów muzycznych w teatrach: Teatr Komedia, Teatrze Żydowskim, Teatrze Lalka. Współpracował z m.in. Czesławem Mozilem, Mają Kleszcz i Joanną Kulig. Prowadzi klasę fortepianu jazzowego w Autorskiej Szkole Jazzu i Muzyki Rozrywkowej im. Krzysztofa Komedy w Warszawie. W muzyce ceni oszczędność i powściągliwość - tak aby każdy dźwięk nosił ze sobą większą odpowiedzialność."
     }
 }

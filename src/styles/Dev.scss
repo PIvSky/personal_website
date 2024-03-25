@@ -23,6 +23,10 @@
                 display: inline-block; /*with this we have border only under the text*/
                 @include title-section;
                 padding: 0px;
+
+                span {
+                    text-wrap: nowrap;
+                }
             }
 
             .dev-header__icons {

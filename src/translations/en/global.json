@@ -30,5 +30,25 @@
         "swina" : "Composed for 'Timelapse'. This composition is inspired by the river flowing through Świnoujście.",
         "highway" : "Composed for 'Timelapse'. This composition is a result of combination of hip-hop and jazz music.",
         "s3" : "Also composed for 'Timelapse'. S3 is a name of road in West Poland. This composition is about beeing on tour as a common part of musician life."
+    },
+    "contact" : {
+        "send" : "SEND ME A MESSAGE",
+        "contact" : "CONTACT ME",
+        "city" : "WARSAW",
+        "name":"FULL NAME",
+        "email":"YOUR EMAIL",
+        "phone":"PHONE(not required)",
+        "message":"YOUR MESSAGE",
+        "button":"SEND"
+    },
+    "pop-up" : {
+        "thanks" : "Thank You",
+        "info":"Your message was send!",
+        "close":"CLOSE"
+    },
+    "valid" : {
+        "name":"Min. 3, and only letters.",
+        "email":"Please, write valid email adress.",
+        "phone":"Please, write valid phone number, eg. 000-000-000."
     }
 }

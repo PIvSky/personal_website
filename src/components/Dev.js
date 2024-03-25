@@ -42,7 +42,7 @@ const Dev = () => {
             <div className='dev-wrapper'>
                 <div className='dev-container'>
                     <div className='dev-header'>
-                        <h1 className='dev-header__title'>Frontend Developer</h1>
+                        <h1 className='dev-header__title'>Frontend Developer <span>(only EN)</span></h1>
                         <div className="dev-header__icons">
                             <a href='https://github.com/PIvSky' target='_blank' rel="noreferrer"><img alt='githubIcon' src={githubIcon} ></img></a>
                             <a href='https://www.linkedin.com/in/pivsky/' target='_blank' rel="noreferrer"><img alt='githubIcon' src={linkedinIcon} ></img></a>

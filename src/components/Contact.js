@@ -6,6 +6,7 @@ import AdressImg from '../assets/icons/icons8-placeholder-50.png';
 import PhoneImg from '../assets/icons/icons8-phone-50.png';
 import EmailImg from '../assets/icons/email-icons8-mail-50.png';
 import {validName, validEmail, validPhone} from '../validation/RegEx';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
 
@@ -27,6 +28,8 @@ const Contact = () => {
     const [formErrors, setFormErrors] = useState(initialErrors);
     // emailjs 
     const form = useRef();
+    // i18next
+    const [t] = useTranslation("global")
 
     // INPUT STATES
     const nameChangeHandler = (event) => {
@@ -97,7 +100,7 @@ const Contact = () => {
             setFormErrors(prevFormErrors => ({...prevFormErrors, name: ""}))
             refNameStyle.borderBottom = '2px solid #42ac79'
         } else if (!validName.test(name) && name !== "") {
-            setFormErrors(prevFormErrors => ({...prevFormErrors, name: "Min. 3, and only letters."}))
+            setFormErrors(prevFormErrors => ({...prevFormErrors, name: t("valid.name")}))
             refNameStyle.borderBottom = '2px solid red'
         } else if (name.length === 0) {
             setFormErrors(prevFormErrors => ({...prevFormErrors, name: ""}))
@@ -109,7 +112,7 @@ const Contact = () => {
             setFormErrors(prevFormErrors => ({...prevFormErrors, email: ""}))
             refEmailStyle.borderBottom = '2px solid #42ac79'
         } else if (!validEmail.test(email) && email !== "") {
-            setFormErrors(prevFormErrors => ({...prevFormErrors, email: "Please, write valid email adress."}))
+            setFormErrors(prevFormErrors => ({...prevFormErrors, email: t("valid.email")}))
             refEmailStyle.borderBottom = '2px solid red'
         } else if (email.length === 0) {
             setFormErrors(prevFormErrors => ({...prevFormErrors, email: ""}))
@@ -121,7 +124,7 @@ const Contact = () => {
             setFormErrors(prevFormErrors => ({...prevFormErrors, phonenumber: ""}))
             refPhoneStyle.borderBottom = '2px solid #42ac79'
         } else if (!validPhone.test(phone) && phone !== "") {
-            setFormErrors(prevFormErrors => ({...prevFormErrors, phonenumber: "Please, write valid phone number, eg. 000-000-000."}))
+            setFormErrors(prevFormErrors => ({...prevFormErrors, phonenumber: t("valid.phone")}))
             refPhoneStyle.borderBottom = '2px solid red'
         } else if (phone.length === 0) {
             setFormErrors(prevFormErrors => ({...prevFormErrors, phonenumber: ""}))
@@ -190,12 +193,12 @@ const Contact = () => {
                         onSubmit={sendEmail} 
                         className='message-column'>
                         <div className='message-element'>
-                            <span className='message-element__title'>SEND ME A MESSAGE</span>
+                            <span className='message-element__title'>{t("contact.send")}</span>
                         </div>
                         <div className='message-element'>
                             <input 
                                 name='contact_name'
-                                placeholder='FULL NAME'
+                                placeholder={t("contact.name")}
                                 ref={refInputName}
                                 value={name}
                                 onChange={nameChangeHandler}
@@ -205,7 +208,7 @@ const Contact = () => {
                         <div className='message-element'>
                             <input 
                                 name='contact_email'
-                                placeholder='YOUR EMAIL'
+                                placeholder={t("contact.email")}
                                 ref={refInputEmail}
                                 value={email}
                                 onChange={emailChangeHandler}
@@ -215,7 +218,7 @@ const Contact = () => {
                         <div className='message-element'>
                             <input 
                                 name='contact_phone'
-                                placeholder='PHONE(not required)'
+                                placeholder={t("contact.phone")}
                                 ref={refInputPhone}
                                 value={phone}
                                 onChange={phoneChangeHandler}
@@ -226,7 +229,7 @@ const Contact = () => {
                             <textarea 
                                 name='contact_message'
                                 ref={textareaRef}
-                                placeholder='YOUR MESSAGE'
+                                placeholder={t("contact.message")}
                                 rows={3}
                                 value={message}
                                 onChange={messageChangeHandler}    
@@ -242,17 +245,17 @@ const Contact = () => {
                                 onClick={ContactHandler}
                                 disabled={buttonDisabled}
                             >
-                            SEND
+                            {t("contact.button")}
                             </button>
                         </div>
                     </form>
                     <div className='contact-column'>
                         <div className='contact-element'>
-                            <span className='contact-element__title'>CONTACT ME</span>
+                            <span className='contact-element__title'>{t("contact.contact")}</span>
                         </div>
                         <div className='contact-element'>
                             <img alt='adress-icon' src={AdressImg}></img>
-                            <span className='contact-element__adress'>WARSAW</span>
+                            <span className='contact-element__adress'>{t("contact.city")}</span>
                         </div> 
                         <div className='contact-element'>
                             <img alt='adress-icon' src={PhoneImg}></img>

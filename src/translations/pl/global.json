@@ -1,6 +1,6 @@
 {
     "navbar" : {
-        "home": "HOME",
+        "home": "GALERIA",
         "bio": "O MNIE",
         "pianist": "PIANISTA",
         "arranger/composer" : "ARANŻER/KOMPOZYTOR",
@@ -30,5 +30,25 @@
         "swina" : "Kompozycja z płyty Timelapse. Inspiracją dla tego utworu była rzeka Świna, oddzielająca Świnoujście od stałego lądu. To miejsce, w którym podczas swej podróży musisz się zatrzymać, aby po kilku chwilach w wolnym, jednostajnym tempie przeprawić się małym promem na drugą część lądu.",
         "highway" : "Utwór ten jest wynikiem kombinacji dwóch moich uwczesnych inspiracji - jazzu oraz hip-hopu.",
         "s3" : "S3 to nazwa drogi w zachodniej Polsce. Ta kompozycja opowiada o byciu w trasie - stałym elemencie życia koncertującego muzyka."
+    },
+    "contact" : {
+        "send" : "NAPISZ DO MNIE",
+        "contact" : "DANE KONTAKTOWE",
+        "city" : "WARSZAWA",
+        "name":"IMIĘ I NAZWISKO",
+        "email":"ADRES EMAIL",
+        "phone":"NR TEL. KOM.",
+        "message":"TREŚĆ WIADOMOŚCI",
+        "button":"WYŚLIJ"
+    },
+    "pop-up" : {
+        "thanks" : "Dziękuję Ci",
+        "info":"Twoja wiadomość została wysłana!",
+        "close":"Zamknij"
+    },
+    "valid" : {
+        "name":"Min. 3 i tylko litery.",
+        "email":"Napisz poprawny adres email.",
+        "phone":"Napisz poprawny numer tel. (6 cyfr)"
     }
 }

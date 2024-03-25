@@ -25,7 +25,10 @@
         "mozil" : "Arrangment for symphony orchestra a song of popular Polish Band Farben Lehre.",
         "maroon" : "Swingin arrangement of popular Marron 5 song for jazz quintet.",
         "jackson" : "Arrangment of Michael Jackson's song for jazz quintet."
+    },
+    "composer" : {
+        "swina" : "Composed for 'Timelapse'. This composition is inspired by the river flowing through Świnoujście.",
+        "highway" : "Composed for 'Timelapse'. This composition is a result of combination of hip-hop and jazz music.",
+        "s3" : "Also composed for 'Timelapse'. S3 is a name of road in West Poland. This composition is about beeing on tour as a common part of musician life."
     }
-
-
 }

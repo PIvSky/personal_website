@@ -25,5 +25,10 @@
         "mozil" : "Aranżacja na orkiestrę symfoniczną utworu zespołu Farben Lehre.",
         "maroon" : "Swingowa aranżacja na kwintet jazzowy popularnej piosenki zespołu Marron 5.",
         "jackson" : "Aranżacja na kwintet jazzowy utworu Michaela Jacksona."
+    },
+    "composer" : {
+        "swina" : "Kompozycja z płyty Timelapse. Inspiracją dla tego utworu była rzeka Świna, oddzielająca Świnoujście od stałego lądu. To miejsce, w którym podczas swej podróży musisz się zatrzymać, aby po kilku chwilach w wolnym, jednostajnym tempie przeprawić się małym promem na drugą część lądu.",
+        "highway" : "Utwór ten jest wynikiem kombinacji dwóch moich uwczesnych inspiracji - jazzu oraz hip-hopu.",
+        "s3" : "S3 to nazwa drogi w zachodniej Polsce. Ta kompozycja opowiada o byciu w trasie - stałym elemencie życia koncertującego muzyka."
     }
 }

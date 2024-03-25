@@ -54,7 +54,7 @@
         
             .dev-about__content{
                 padding-top: 20px;
-                font-size: 0.8rem;
+                font-size: map-get($font-size, content );
                 overflow: auto;
                 word-wrap: break-word;
                 text-indent: 10px;

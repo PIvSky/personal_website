@@ -60,7 +60,7 @@ header {
                 }
 
                 a.active {
-                    color: map-get($colors, hover)
+                    color: map-get($colors, secondary)
                 }
             }
 

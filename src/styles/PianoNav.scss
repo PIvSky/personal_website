@@ -39,8 +39,8 @@
         img {
             height: auto;
             width: 250px;
-            border: solid 2px orange;
-            border-radius: 10%;
+            border: solid 2px map-get($colors, secondary );
+            border-radius: map-get($b-rad, img );;
             transition: 1s;
             z-index: 2;
         }

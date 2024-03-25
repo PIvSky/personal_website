@@ -31,7 +31,7 @@
 
         iframe{
             border: none;
-            border-radius: 10%;
+            border-radius: map-get($b-rad, img );
             padding: 5px;
             // margin: auto;
         }

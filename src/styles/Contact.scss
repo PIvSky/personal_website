@@ -106,7 +106,8 @@
                     font-family: map-get($fonts, basic-font );
                     background-color: map-get($colors, background );
                     transition: 400ms ease-in-out;
-                    border-radius: 10rem;
+                    padding-inline: 15px;
+                    border-radius: map-get($b-rad, img );
 
                     &:hover{
                         border: 3px solid map-get($colors, secondary );

@@ -31,7 +31,7 @@
 
         iframe{
             border: none;
-            border-radius: 8%;
+            border-radius: map-get($b-rad, img );
             padding-block: 5px;
             height: 300px;
             width: 80vw;
@@ -46,7 +46,7 @@
             padding-top: 30px;
 
             iframe {
-                border-radius: 3%;
+                border-radius: map-get($b-rad, img );;
                 height: 600px;
                 width: 82vw;
             }

@@ -143,7 +143,7 @@ const Contact = () => {
         //     refNameStyle.borderBottom = '2px solid #3b313181'
         // }
 
-    }, [name, email, phone, message]);
+    }, [name, email, phone, message, t]);
 
     // EMAILJS API
 

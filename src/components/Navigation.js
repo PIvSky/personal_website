@@ -92,7 +92,7 @@ const Navigation = () => {
                     </button>
                 </ul>
             </nav>
-            <button className='nav-btn' onClick={showNavbar}>
+            <button className='nav-btn' onClick={showNavbar} aria-label="Menu">
                 <FaBars/>
             </button>
         </header>

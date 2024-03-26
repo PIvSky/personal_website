@@ -7,7 +7,7 @@
 - meritorical content (including e.g. photo postproduction)
 - programming content
 
- *Jazz Questionnaire* is concentrated on React's main concepts like **Hooks, Forms, Components(and comunication between them), Props, JSX and others.**
+ *Jazz Questionnaire* is concentrated on React's main concepts like **Hooks, Forms, Components(and comunication between them), Props, JSX and others.** My page is bilingual - I used i18next library to manage between Polish and English. I took care about SEO - Google Chrome Lighthouse show **SEO of this webpage on 100%.**
 
 Technologies I used in project:
 - HTML

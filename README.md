@@ -2,6 +2,7 @@
 
 ## About
 
+I was responsible of:
 
 - design and layout of webpage
 - meritorical content (including e.g. photo postproduction)
